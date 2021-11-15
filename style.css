@@ -7,15 +7,15 @@ nav {
 }
 
 ul {
-  background: darkorange;
+  background: #364765;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
 li {
-  color: #fff;
-  background: darkorange;
+  color: #b69c91;
+  background: #76819c;
   display: block;
   float: left;
   padding: 1rem;
@@ -25,12 +25,12 @@ li {
 }
   
 li a {
-  color: #fff;
+  color: #e1dad8;
 }
 
 li:hover,
 li:focus-within {
-  background: red;
+  background: #364765;
   cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ li:focus-within a {
 }
 
 ul li ul {
-  background: orange;
+  background: orange(211, 153, 44);
   visibility: hidden;
   opacity: 0;
   min-width: 5rem;
