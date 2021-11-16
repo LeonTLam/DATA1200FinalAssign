@@ -15,19 +15,42 @@
 <body>
     <!--Navigation-->
     <header>
-        <nav class="nav">
-            <ul>
-                <li><a href ="#">Menu</a>
-                    <ul class = "dropdown">
-                        <li> <a href="../../index.html">Velkommen!</a></li>
-                        <li> <a href="../reflection/reflection.html">Livet som student</a></li>
-                        <li> <a href="accessibility.html">Universell utforming</a></li>
-                        <li> <a href="../topical/topical.html">Teknologi og samfunn</a></li>
-                        <li> <a href="../fun/fun.html">Moro</a></li>
-                    </ul>
-                </li>    
-            </ul>
+        
+        <nav class="navigasjonsbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <img src="../../bilder/svg/bars-solid.svg" width="30" height="30" color>
+            </a>
+        </span>
+
+        
         </nav>
+
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="../../index.html">Velkommen!</a>
+            <a href="../reflection/reflection.html">Livet som student</a>
+            <a href="accessibility.html">Universell utforming</a>
+            <a href="../topical/topical.html">Teknologi og samfunn</a>
+            <a href="../fun/fun.html">Moro</a>
+        </div>
+        
+        <div class="hero">
+            <h1 class="title">
+                Accessibility
+            </h1>
+        </div>
+
+        <script>
+            function openSlideMenu(){
+                document.getElementById('side-menu').style.width="100%";
+                document.getElementById('main').style.marginLeft="300px";
+            }
+            function closeSlideMenu(){
+                document.getElementById('side-menu').style.width="0px";
+                document.getElementById('main').style.marginLeft="0px";
+            }
+        </script>
     </header>
     
 </body>
