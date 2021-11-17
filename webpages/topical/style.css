@@ -106,6 +106,9 @@ main{
   overflow:hidden;
   width: 100%;
 }
+ol li{
+  margin: 40px;
+}
 
 p{
   padding: 1rem 2rem 1rem;
