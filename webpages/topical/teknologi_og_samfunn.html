@@ -51,9 +51,15 @@
                 document.getElementById('side-menu').style.width="0px";
                 document.getElementById('main').style.marginLeft="0px";
             }
+            function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
         </script>
     </header>
     
+    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30"></button>
+
     <!--Main-->
     <main>
         <article>

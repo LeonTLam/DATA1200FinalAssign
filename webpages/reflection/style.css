@@ -2,7 +2,7 @@
 
 body{
   font-family: 'Arial', Arial, Helvetica, sans-serif;
-  background-color: whitesmoke;
+  background-color: #e1dad8;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -10,19 +10,14 @@ body{
 }
 
 main{
-  background-color: whitesmoke;
+  background-color: #e1dad8;
   width: 100%;
-  margin: auto;
 }
 
-
-.velkommen h1{
-  font-size: 50px;
-}
 /*Navigasjon*/
 .navigasjonsbar{
-  background-color: whitesmoke;
-  overflow:hidden;
+  background-color: #e1dad8;
+  overflow:hidden;  
   height: 63px;
 }
 
@@ -82,39 +77,95 @@ main{
   margin-left: 50px;
 }
 
-
-
 #main {
   transform: margin-top 0.5s;
-  padding: 20px;
-  overflow:hidden;
+  overflow: hidden;
   width: 100%;
 }
-.h1{
-    font-weight: bold;
+.student{
+  background-color: #e1dad8;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 60px;
+  padding-top: 50px;
 }
-.h2{
-    font-weight: bold;
+
+.god-student{
+  background-color: #648181;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-top: 50px;
+  
 }
+.arbeidsmengde{
+  background-color:#e1dad8;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 60px;
+  padding-top: 50px;
+  
+}
+
+.h3{
+    font-style: bold;
+    size: 30px; 
+}
+
 .title {
   font-size: 85px;
   font-weight: bold;
   color: #648181;
   margin-left: 25px;
+  
+}
+article {
+  margin-left: 0;
+}  
+
+#go_top{
+  
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 90; 
+  border: none;
+  
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
 }
 
-p{
-  padding: 1rem 2rem 1rem;
+
+main > article img {
+  width: 450spx;
+  height: 430px;
+  float: right;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  
 }
 
 
 @media(max-width:650px){
-    .side-nav a{
-      
-      font-size: 35px;
-      
-    }
+  .side-nav a{
+    
+    font-size: 35px;
+    
+  }
 }
-article {
-  margin-left: 25px;
-}  

@@ -115,3 +115,18 @@ main{
 
 
 }
+
+#go_top{
+  
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 90; 
+  border: none;
+  
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
+}
