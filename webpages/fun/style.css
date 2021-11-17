@@ -1,10 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
-
-html{
-  scroll-behavior: smooth;
-}
-
 body{
   font-family: 'Arial', Arial, Helvetica, sans-serif;
   background-color: whitesmoke;
@@ -25,11 +19,8 @@ main{
 }
 /*Navigasjon*/
 .navigasjonsbar{
-  position: absolute;
   background-color: whitesmoke;
   overflow:hidden;
-  top: 10px; /* Place the button at the bottom of the page */
-  right: 10px; /* Place the button 30px from the right */
   height: 63px;
 }
 
@@ -64,7 +55,7 @@ main{
   opacity: 1;
   overflow-x:hidden;
   padding-top: 60px;
-  transition: .6s;
+  transition: 0.5s;
 }
 
 .side-nav a{
@@ -83,28 +74,11 @@ main{
 
 .side-nav .btn-close{
   position: absolute;
-  top:-28px;
-  right: 10px;
+  top:-38px;
+  right: 1px;
   font-size: 80px;
   margin-left: 50px;
 }
-
-#go_top{
-  
-  position: fixed; 
-  bottom: 10px; 
-  right: 10px; 
-  z-index: 90; 
-  border: none;
-  
-  background-color: transparent;
-  cursor: pointer; 
-  padding: 15px; 
-  border-radius: 0px; 
-  
-}
-
-
 
 #main {
   transform: margin-top 0.5s;
@@ -131,46 +105,6 @@ main{
   font-weight: bold;
   color: #648181
 }
-
-main > article:nth-child(1){
-  width: 100%;
-  background-color: #e1dad8
-}
-
-
-
-main div{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-.velkommen{
-  width: 80vw;
-  height: 65vh;
-  
-  
-  
-}
-
-main > article img{
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-
-}
-
-main > article:nth-child(2){
-  padding: 3rem 0 3rem 0;
-  width:80vw;
-  margin-left: auto;
-  margin-right: auto;
-  column-count: 2;
-  column-gap: 10%;
-  
-}
-
-
 
 @media(max-width:650px){
   .side-nav a{

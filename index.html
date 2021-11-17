@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -26,7 +26,7 @@
         <nav class="navigasjonsbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
-                <img src="bilder/svg/bars-solid.svg" width="30" height="30" color>
+                <img src="svg/menubar.svg" width="30" height="30" >
             </a>
         </span>
 
@@ -36,10 +36,10 @@
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="index.html">Velkommen!</a>
-            <a href="webpages/reflection/reflection.html">Livet som student</a>
-            <a href="webpages/accessibility/accessibility.html">Universell utforming</a>
-            <a href="webpages/topical/topical.html">Teknologi og samfunn</a>
-            <a href="webpages/fun/fun.html">Moro</a>
+            <a href="webpages/reflection/livet_som_student.html">Livet som student</a>
+            <a href="webpages/accessibility/universell_utforming.html">Universell utforming</a>
+            <a href="webpages/topical/teknologi_og_samfunn.html">Teknologi og samfunn</a>
+            <a href="webpages/fun/moro.html">Moro</a>
         </div>
         
         <div class="hero">
@@ -48,33 +48,38 @@
             </h1>
         </div>
 
-        <script>
-            function openSlideMenu(){
-                document.getElementById('side-menu').style.width="100%";
-                document.getElementById('main').style.marginLeft="300px";
-            }
-            function closeSlideMenu(){
-                document.getElementById('side-menu').style.width="0px";
-                document.getElementById('main').style.marginLeft="0px";
-            }
-        </script>
+        
     </header>
     
-    
+    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="svg/goup.svg" width="30" height="30"></button>
 
     <!--Main-->
     <main>
+        
         
 
         <article>
            <div class="velkommen">
                <h1>Velkommen!</h1>
-               <p> Teknologi er fremtiden, det vet vi alle. En rekke universiteter i hele verden tilbyr spennende utdanninger innenfor teknologi. OsloMet er en av dem. Teknologistudiene på OsloMet vil lære deg interessante ting som vil gi deg muligheten til å jobbe innenfor mange spennende yrker. Som første-års student vil du få et godt grunnlag for fremtiden. Du vil blant annet ha emner som programmering, diskret matematikk, web utvikling, og teknologi og samfunn. Overgangen fra videregående eller friår, til universitet kan være en stor utfordring for mange, men underveis lærer man seg stadig nye måter å takle overgangen på. 
+               <p> Teknologi er fremtiden, det vet vi alle. En rekke universiteter i hele verden tilbyr spennende utdanninger innenfor teknologi. OsloMet er en av dem. 
+                   Teknologistudiene på OsloMet vil lære deg interessante ting som vil gi deg muligheten til å jobbe innenfor mange spennende yrker. 
+                   Som første-års student vil du få et godt grunnlag for fremtiden. Du vil blant annet ha emner som programmering, diskret matematikk, web utvikling, og teknologi og samfunn. 
+                   Overgangen fra videregående eller friår, til universitet kan være en stor utfordring for mange, men underveis lærer man seg stadig nye måter å takle overgangen på. </p>
 
  
-                    Denne nettsiden vil gi deg innblikk i livet som første-års student, hvordan vi sikret universell utforming, tidligere leverte oppgaver i faget teknologi og samfunn, og en kreativ side som viser hvem vi, i gruppe 1200, er som webdesignere(?)</p>
+                 <p>  Denne nettsiden vil gi deg innblikk i livet som første-års student, hvordan vi sikret universell utforming, 
+                    tidligere leverte oppgaver i faget teknologi og samfunn, og en kreativ side som viser hvem vi, i gruppe 1200, er som webdesignere. <br></p>
            </div> 
 
+        </article>
+
+        <article>
+            <img src="images/main_images/p35.jpg">
+            <div class="Oslomet">
+                <h1>OsloMet - Pilestredet 35</h1>
+                <p>Oslo Metropolitan University, også kalt Storbyuniversitet, er den tidligere Høgskolen i Oslo og Akershus. OsloMet har studiesteder i både Oslo og Lillestrøm. </p>
+            </div>
+            
         </article>
     </main>
     
@@ -82,5 +87,22 @@
     <footer>
         
     </footer>
+
+    <!--Scripts-->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width="100%";
+            document.getElementById('main').style.marginLeft="300px";
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width="0px";
+            document.getElementById('main').style.marginLeft="0px";
+        }
+
+        function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
