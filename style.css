@@ -18,19 +18,26 @@ main{
   background-color: whitesmoke;
   width: 100%;
   margin: auto;
+  
 }
 
-.velkommen h1{
+p{
+  font-family:'Times New Roman', Times, serif;
+  line-height: 0.75cm;
+  font-size: 17px;
+}
+
+h1{
   font-size: 50px;
   font-family: times 'Times New Roman', Times, serif;
 }
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.3);
   overflow:hidden;
-  top: 10px; /* Place the button at the bottom of the page */
-  right: 10px; /* Place the button 30px from the right */
+  top: 10px; 
+  right: 10px; 
   height: 63px;
 }
 
@@ -115,7 +122,7 @@ main{
 .hero {
   width:100%;
   height:50rem;
-  /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
+  background: linear-gradient(rgba(245,245,245,.1),rgba(245,245,245,0.1)), url("/images/main_images/velkommenhero.jpg") center no-repeat;
   background-size:cover;
   background-attachment: fixed;
   display:flex;
@@ -128,28 +135,30 @@ main{
 .title {
   font-size: 85px;
   font-weight: bold;
-  color: #648181
+  color: #648181;
+  
 }
+
+
 
 main > article:nth-child(1){
-  width: 100%;
-  background-color: #e1dad8
-}
-
-
-
-main div{
   padding-top: 3rem;
   padding-bottom: 3rem;
+  height: 65vh;
+ 
+  background-color: #e1dad8;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 0px 1.5px 0px;
+  
+}
+
+
+
+.velkommen{
+  width: 60vw;
   margin-left: auto;
   margin-right: auto;
-}
-.velkommen{
-  width: 80vw;
-  height: 65vh;
-  
-  
-  
 }
 
 main > article img{
@@ -160,29 +169,74 @@ main > article img{
 }
 
 main > article:nth-child(2){
-  padding: 3rem 0 3rem 0;
-  width:80vw;
-  margin-left: auto;
-  margin-right: auto;
-  column-count: 2;
-  column-gap: 10%;
-  
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 0px 1.5px 0px;
 }
 
+.oslomet-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 0 3rem 0;
+  width:80vw;
+  text-align:center
+}
 
+.oslomet-text{
+  padding-left: 5rem;
+}
 
-@media(max-width:650px){
+.btn-oslomet{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.2em solid #e1dad8;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 17px;
+  color:black;
+  background-color: whitesmoke;;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.btn-oslomet:hover{
+  background-color:#e1dad8;
+}
+
+@media only screen and (max-width:750px){
   .side-nav a{
     
     font-size: 35px;
     
   }
+  
+  .title{
+    font-size: 55px;
+  }
 
+  main > article:nth-child(1){
+    height: 80vh;
+  }
 
+  .oslomet-container{
+    flex-direction: column;
+  }
+
+  .oslomet-text{
+    padding-left: 0;
+  }
+  
 }
 
-p{
-  font-family:'Times New Roman', Times, serif;
-  line-height: 0.75cm;
-  font-size: 17px;
+@media only screen and (min-width:750px) and (max-width:1000px) {
+  main > article img{
+    width: 300px;
+    height: 450px;
+  }
 }
