@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
 body{
   font-family: 'Arial', Arial, Helvetica, sans-serif;
-  background-color: whitesmoke;
+  background-color: #648181;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -9,17 +9,15 @@ body{
 }
 
 main{
-  background-color: whitesmoke;
+  background-color: #648181;
   width: 100%;
   margin: auto;
+  
 }
 
-.velkommen h1{
-  font-size: 50px;
-}
 /*Navigasjon*/
 .navigasjonsbar{
-  background-color: whitesmoke;
+  background-color: #648181;
   overflow:hidden;
   height: 63px;
 }
@@ -41,7 +39,7 @@ main{
 
 .navigasjonsbar a:hover{
   background-color: #e1dad800;
-  color: #648181;
+  color: #e1dad8;
 }
 
 .side-nav{
@@ -51,7 +49,7 @@ main{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #648181; 
+  background-color: #e1dad8; 
   opacity: 1;
   overflow-x:hidden;
   padding-top: 60px;
@@ -63,7 +61,7 @@ main{
   text-decoration: none;
   font-size: 55px;
   font-weight: bold;
-  color:#e1dad8; 
+  color: #648181; 
   display:block;
   transition: 0.3s;
 }
@@ -90,13 +88,12 @@ main{
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
 
 .title {
   font-size: 85px;
   font-weight: bold;
-  color: #648181
+  color: #e1dad8
   
 }
 
@@ -112,19 +109,24 @@ ol li{
 
 p{
   padding: 1rem 2rem 1rem;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 0.75cm;
 }
 
-h2,h3,h4{
+h1,h3{
   padding: 0rem 2rem 1rem;
 }
 
-@media(max-width:650px){
-    .side-nav a{
-      
-      font-size: 35px;
-      
-    }
-  
+.falske-nyheter {
+  width: 100%;
+  background-color: #e1dad8;
+
+}
+
+.teknologi{
+  width: 100%;
+  background-color: #e1dad8;
 }
 
 #go_top{
@@ -141,3 +143,13 @@ h2,h3,h4{
   border-radius: 0px; 
   
 }
+
+@media(max-width:650px){
+  .side-nav a{
+    
+    font-size: 35px;
+    
+  }
+
+}
+

@@ -22,6 +22,7 @@ main{
 
 .velkommen h1{
   font-size: 50px;
+  font-family: times 'Times New Roman', Times, serif;
 }
 /*Navigasjon*/
 .navigasjonsbar{
@@ -178,4 +179,10 @@ main > article:nth-child(2){
   }
 
 
+}
+
+p{
+  font-family:'Times New Roman', Times, serif;
+  line-height: 0.75cm;
+  font-size: 17px;
 }
