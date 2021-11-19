@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   background-color: #EFEAE4;
   width: 100%;
   padding: 0;
@@ -19,7 +23,7 @@ main{
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
-  background-color: #EFEAE4;
+  background: #efeae400;
   overflow:hidden;
   top: 10px; 
   right: 10px; 
@@ -40,7 +44,7 @@ main{
 
 .navigasjonsbar a:hover{
   background-color: #e1dad800;
-  color: #9C9584;
+  color: #9c9584;
 }
 
 .side-nav{
@@ -60,7 +64,8 @@ main{
 .side-nav a{
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 6rem;
+  line-height: 1.3;
   font-weight: bold;
   color:#EFEAE4; 
   display:block;
@@ -79,12 +84,17 @@ main{
   margin-left: 50px;
 }
 
+
+
 main > article:nth-child(-n+3){
   border-style: solid;
-  border-color: #4E5255;
-  border-width: 0.75px 0px 0.75px 0px;
+  border-color: #534f46;
+  border-width: 0 0px 1.5px 0px;
+  padding: 75px 50px 75px 50px;
 }
-
+  main > article:nth-child(2){
+    background: #9C9584
+  }
 
 #main {
   transform: margin-top 0.5s;
@@ -92,71 +102,95 @@ main > article:nth-child(-n+3){
   width: 100%;
 }
 
-main > article:nth-child(1) img{
-  width: 250px;
-  height: 350px;
-  object-fit: cover;
-
-}
 
 .student{
   background-color: #EFEAE4;
-  width:80vw;
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 100px 50px 100px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.4fr 1.3fr;
+   gap: 17px 17px; 
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Tittel Tittel"
+    "parag1 img-container"
+    "parag2 parag2";
+}
+
+.student-tittel { 
+  grid-area: Tittel; 
+  font-size: 40px;
+}
+
+.img-container { 
+  grid-area: img-container;
+}
+.img-container img{
+  height:100%;
+  width:100%;
   
+  object-fit: cover;
+}
+.parag1 { 
+  grid-area: parag1; 
+  font-size: 20px;
+  line-height: 1.3cm;
 }
 
-.student-text{
-  padding-left: 80px;
+.parag2 { 
+  grid-area: parag2; 
+  font-size: 20px;
+  line-height: 1.3cm;
 }
 
-.student-text > p {
-  font-size: 17px;
-  line-height: 0.75cm;
-}
+
+
+
 
 .god-student{
-  background: #9C9584;
-  padding:100px 50px 100px 50px;
-  
+  display:inline-block;
   margin-left: auto;
   margin-right: auto;
-  
 }
 .god-student-text{
-  width: 80vw;
-}
-.god-student > p{
-  font-size: 17px;
-  line-height: 0.75cm;
+  width: 60vw;
   
+}
+
+.god-student > p{
+  font-size: 20px;
+  line-height: 1.3cm;
+  font-family: sans-serif;
+  
+}
+.god-student > h3 {
+  font-size: 40px;
 }
 
 .arbeidsmengde{
   background-color: #EFEAE4;
-  width:80vw;
+  
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 50px 100px 50px;
+ 
 }
 
-
-.arbeidsmengde-text > p {
-  font-size: 17px;
-  line-height: 0.75cm;
+.arbeidsmengde-text{
+  height: 100%;
   padding-left: 80px ;
+  
 }
-
+.arbeidsmengde-text > h3{
+  font-size: 40px;
+}
+.arbeidsmengde-text > p {
+  font-size: 20px;
+  line-height: 1.3cm;
+  
+}
 
 
 .hero {
@@ -166,6 +200,8 @@ main > article:nth-child(1) img{
   background-size:cover;
   background-attachment: fixed;
   display:flex;
+
+  background-image: linear-gradient(#9C9584 20% , #EFEAE4 );
   
   align-items: center;
   justify-content: center;
@@ -180,7 +216,7 @@ main > article:nth-child(1) img{
   font-family: monospace;
   font-size: 85px;
   font-weight: bold;
-  color: #9C9584
+  color: #534f46
 }
 
 @keyframes typing {
@@ -218,22 +254,31 @@ footer{
 
 
 @media only screen and (max-width:750px){
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 16px;
+    line-height: .7cm;
+}
+  
   .side-nav a{
-    
     font-size: 35px;
-    
   }
   
   .title{
     font-size: 45px;
   }
 
-  main > article:nth-child(1) img{
-    width: 400px;
-    height: 300px;
-  }
+ 
 
   .student{
+    flex-direction: column;
+  }
+
+  .arbeidsmengde{
     flex-direction: column;
   }
 
@@ -247,8 +292,18 @@ footer{
 }
 
 @media only screen and (min-width:750px) and (max-width:1000px) {
-  main > article:nth-child(1) img{
-    width: 250px;
-    height: 450px;
-  }
+ 
+
+  
+
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 18px;
+    line-height: .8cm;
+}
+
 }

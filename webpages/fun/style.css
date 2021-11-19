@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Arial', Arial, Helvetica, sans-serif;
   background-color: whitesmoke;
