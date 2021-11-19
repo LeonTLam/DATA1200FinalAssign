@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
 body{
   font-family: 'Arial', Arial, Helvetica, sans-serif;
-  background-color: #648181;
+  background-color: #9C9584;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@ body{
 }
 
 main{
-  background-color: #648181;
+  background-color: #9C9584;
   width: 100%;
   margin: auto;
   
@@ -17,10 +17,14 @@ main{
 
 /*Navigasjon*/
 .navigasjonsbar{
-  background-color: #648181;
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.3);
   overflow:hidden;
+  top: 10px; 
+  right: 10px; 
   height: 63px;
 }
+
 
 .navigasjonsbar a{
   float:right;
@@ -32,11 +36,6 @@ main{
   font-size: 17px;
 }
 
-.navigasjonsbar ul{
-  margin: 8px 0 0 0;
-  list-style:none;
-}
-
 .navigasjonsbar a:hover{
   background-color: #e1dad800;
   color: #e1dad8;
@@ -46,7 +45,7 @@ main{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 90;
   top: 0;
   left: 0;
   background-color: #e1dad8; 
@@ -61,7 +60,7 @@ main{
   text-decoration: none;
   font-size: 55px;
   font-weight: bold;
-  color: #648181; 
+  color: #9C9584; 
   display:block;
   transition: 0.3s;
 }
@@ -72,15 +71,16 @@ main{
 
 .side-nav .btn-close{
   position: absolute;
-  top:-38px;
-  right: 1px;
+  top:-28px;
+  right: 10px;
   font-size: 80px;
   margin-left: 50px;
+
 }
 
 .hero {
   width:100%;
-  height:50rem;
+  height:100vh;
   /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
   background-size:cover;
   background-attachment: fixed;
@@ -93,8 +93,8 @@ main{
 .title {
   font-size: 85px;
   font-weight: bold;
-  color: #e1dad8
-  
+  color: #EFEAE4;
+
 }
 
 #main {
@@ -134,7 +134,7 @@ h1,h3{
   position: fixed; 
   bottom: 10px; 
   right: 10px; 
-  z-index: 90; 
+  z-index: 89; 
   border: none;
   
   background-color: transparent;
