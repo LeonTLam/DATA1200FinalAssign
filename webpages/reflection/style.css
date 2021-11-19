@@ -113,7 +113,7 @@ main > article:nth-child(1) img{
 }
 
 .student-text{
-  padding-left: 5rem;
+  padding-left: 80px;
 }
 
 .student-text > p {
@@ -122,45 +122,41 @@ main > article:nth-child(1) img{
 }
 
 .god-student{
-  background-color: #9C9584;
+  background: #9C9584;
   padding:100px 50px 100px 50px;
   
   margin-left: auto;
   margin-right: auto;
   
 }
-
-.god-student > h1{
-  width: 60vw;
+.god-student-text{
+  width: 80vw;
 }
-
 .god-student > p{
-  width: 60vw;
   font-size: 17px;
   line-height: 0.75cm;
   
 }
 
 .arbeidsmengde{
-  background-color:#EFEAE4;
+  background-color: #EFEAE4;
+  width:80vw;
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  padding: 100px 50px 100px 50px;
 }
 
 
 .arbeidsmengde-text > p {
   font-size: 17px;
   line-height: 0.75cm;
+  padding-left: 80px ;
 }
 
-.arbeidsmengde-text > h3{
-    font-size: 40px; 
-    
-}
 
 
 .hero {
@@ -245,6 +241,9 @@ footer{
     padding-left: 0;
   }
   
+  .arbeidsmengde-text{
+    padding-left: 0;
+  }
 }
 
 @media only screen and (min-width:750px) and (max-width:1000px) {
