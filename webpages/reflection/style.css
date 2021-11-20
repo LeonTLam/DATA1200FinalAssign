@@ -201,7 +201,7 @@ main > article:nth-child(-n+3){
   background-attachment: fixed;
   display:flex;
 
-  background-image: linear-gradient(#9C9584 20% , #EFEAE4 );
+  background-image: linear-gradient(#534f46, #9C9584  , #EFEAE4, #EFEAE4 );
   
   align-items: center;
   justify-content: center;
