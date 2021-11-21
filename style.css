@@ -204,15 +204,16 @@ main > article:nth-child(2){
   cursor:pointer;
 }
 
-footer{
-  background-color: #EFEAE4;  
-  padding: 75px 50px 75px 50px;
-  align-items: center;
+.footer{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
   margin-left: auto;
-  margin-right: auto;
-  
+  margin-right: auto
 }
-
 @media only screen and (max-width:750px){
   .side-nav a{
     

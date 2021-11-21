@@ -215,7 +215,7 @@ main > article:nth-child(-n+3){
 
 
 .hero {
-  width:100%;
+  width:100vw;
   height:100vh;
   
   background-size:cover;
@@ -266,13 +266,18 @@ article {
   border-radius: 0px; 
 }
 
-footer{
-  background-color: #EFEAE4;  
-  padding: 75px 50px 75px 50px;
+.footer{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
   margin-left: auto;
-  margin-right: auto;
-  
+  margin-right: auto
 }
+
+
 
 
 
@@ -314,6 +319,9 @@ footer{
     padding-left: 0;
   }
   
+  .footer{
+    width:90vw;
+  }
   
 }
 
@@ -331,6 +339,10 @@ footer{
     font-size: 18px;
     line-height: .8cm;
 }
+
+.title{
+  font-size: 65px;
+}
 .student{
   width: 80vw;
 }
@@ -339,5 +351,9 @@ footer{
 }
 .arbeidsmengde{
   width: 80vw;
+}
+
+.footer{
+  width:80vw;
 }
 }

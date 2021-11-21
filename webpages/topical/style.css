@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
 body{
-  font-family: 'Arial', Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   background-color: #9C9584;
   width: 100%;
   padding: 0;
@@ -90,10 +90,27 @@ main{
 }
 
 .title {
-  font-size: 85px;
+  width: 19.5ch;
+  animation: typing 2s steps(19), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 113px;
   font-weight: bold;
-  color: #EFEAE4;
+  color: #534f46
+}
 
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
 #main {
@@ -109,7 +126,7 @@ ol li{
 p{
   padding: 1rem 2rem 1rem;
   font-size: 17px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   line-height: 0.75cm;
 }
 
@@ -119,13 +136,84 @@ h1,h3{
 
 .falske-nyheter {
   width: 100%;
-  background-color: #e1dad8;
+  background-color: #9C9584;
+
+  border-style: solid;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 70px 50px 70px 50px;
+  margin-left: auto;
+  margin-right: auto
   
 }
 
+
+.falske-nyheter-tittel {
+  font-size: 40px;
+ 
+}
+
+.falske-nyheter-parag2 > p {
+  font-size: 20px;
+  line-height: 1.3cm;
+}
+
+
 .teknologi{
   width: 100%;
-  background-color: #e1dad8;
+  background-color: #9C9584;
+  border-style: solid;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 70px 50px 70px 50px;
+  margin-left: auto;
+  margin-right: auto
+}
+.teknologi-tittel > h1{
+  font-size: 40px;
+}
+
+.teknologi-parag1 > p{
+  font-size: 20px;
+  line-height: 1.3cm;
+}
+
+.påvirkning {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 70px 50px 70px 50px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.påvirkning-tittel {
+  font-size: 40px;
+}
+.påvirkning a:hover {
+  color: #534f46;
+}
+.påvirkning-parag3 > p {
+  font-size: 20px;
+  line-height: 1.3cm;
+}
+
+.påvirkning-parag3 > ol {
+  font-size: 20px;
+  line-height: 1.3cm;
+  font-family: sans-serif;
+}
+
+.footer{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
 }
 
 #go_top{
@@ -152,3 +240,8 @@ h1,h3{
 
 }
 
+.kilder a{
+  text-decoration: none;
+  color: black
+
+}

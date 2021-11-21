@@ -112,6 +112,17 @@ main{
   color: #9C9584;
 }
 
+.footer{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
 @media(max-width:650px){
   .side-nav a{
     
