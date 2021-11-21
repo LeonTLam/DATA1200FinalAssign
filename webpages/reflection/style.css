@@ -87,14 +87,10 @@ main{
 
 
 main > article:nth-child(-n+3){
-  border-style: solid;
-  border-color: #534f46;
-  border-width: 0 0px 1.5px 0px;
   padding: 75px 50px 75px 50px;
 }
   main > article:nth-child(2){
-    background: #9C9584
-    
+    background: #EFEAE4;
   }
 
 #main {
@@ -106,7 +102,13 @@ main > article:nth-child(-n+3){
 
 .student{
   background-color: #EFEAE4;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
   display: grid;
+  width:60vw;
+  margin-left:auto;
+  margin-right: auto;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.3fr 1.4fr 1.3fr;
    gap: 17px 17px; 
@@ -124,7 +126,10 @@ main > article:nth-child(-n+3){
 
 .img-container { 
   grid-area: img-container;
+  display: inline-block;
+  max-width: 100%;
 }
+
 .img-container img{
   height:100%;
   width:100%;
@@ -145,50 +150,68 @@ main > article:nth-child(-n+3){
 
 
 .god-student{
-  display:inline-block;
-  margin-left: auto;
+  background-color: #EFEAE4;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width:60vw;
+  margin-left:auto;
   margin-right: auto;
 }
-.god-student-text{
-  width: 60vw;
-  
-}
 
-.god-student > p{
+
+.god-student-text > p{
   font-size: 20px;
   line-height: 1.3cm;
   font-family: sans-serif;
   
 }
-.god-student > h3 {
+.god-student-text > h3 {
   font-size: 40px;
 }
 
 .arbeidsmengde{
   background-color: #EFEAE4;
-  
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 0.3fr 1.3fr; 
+  gap: 0px 17px; 
+  grid-template-areas: 
+    "arbeid-tittel arbeid-tittel"
+    "arbeid-img-container arbeid-parag1"; 
+  width:60vw;
+  margin-left:auto;
   margin-right: auto;
  
 }
 
-.arbeidsmengde-text{
-  height: 100%;
-  padding-left: 80px ;
-  
-}
-.arbeidsmengde-text > h3{
+.arbeid-tittel { 
+  grid-area: arbeid-tittel;
   font-size: 40px;
+ }
+.arbeid-img-container { 
+  grid-area: arbeid-img-container;
+  display: inline-block;
+  max-width: 100%;
+ }
+
+ .arbeid-img-container img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
 }
-.arbeidsmengde-text > p {
+.arbeid-parag1 { 
+  grid-area: arbeid-parag1;
   font-size: 20px;
   line-height: 1.3cm;
-  
 }
+
+
+
+
 
 
 .hero {
@@ -196,10 +219,8 @@ main > article:nth-child(-n+3){
   height:100vh;
   
   background-size:cover;
-  background-attachment: fixed;
   display:flex;
-
-  background-image: linear-gradient(#534f46, #9C9584  , #dbd5ce, #EFEAE4 );
+  background-image: linear-gradient(#534f46, #9C9584 , #EFEAE4 );
   
   align-items: center;
   justify-content: center;
@@ -212,7 +233,7 @@ main > article:nth-child(-n+3){
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 85px;
+  font-size: 113px;
   font-weight: bold;
   color: #534f46
 }
@@ -246,7 +267,11 @@ article {
 }
 
 footer{
-  background-color: #9C9584;  
+  background-color: #EFEAE4;  
+  padding: 75px 50px 75px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 
@@ -274,22 +299,25 @@ footer{
 
   .student{
     flex-direction: column;
+    width: 90vw;
+  }
+
+  .god-student{
+    width: 90vw;
   }
 
   .arbeidsmengde{
-    flex-direction: column;
+    width: 90vw;
   }
 
   .student-text{
     padding-left: 0;
   }
   
-  .arbeidsmengde-text{
-    padding-left: 0;
-  }
+  
 }
 
-@media only screen and (min-width:750px) and (max-width:1000px) {
+@media only screen and (min-width:750px) and (max-width:1500px) {
  
 
   
@@ -303,5 +331,13 @@ footer{
     font-size: 18px;
     line-height: .8cm;
 }
-
+.student{
+  width: 80vw;
+}
+.god-student{
+  width: 80vw;
+}
+.arbeidsmengde{
+  width: 80vw;
+}
 }

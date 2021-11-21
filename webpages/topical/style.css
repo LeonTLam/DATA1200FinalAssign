@@ -81,7 +81,6 @@ main{
 .hero {
   width:100%;
   height:100vh;
-  /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
   background-size:cover;
   background-attachment: fixed;
   display:flex;
@@ -121,7 +120,7 @@ h1,h3{
 .falske-nyheter {
   width: 100%;
   background-color: #e1dad8;
-
+  
 }
 
 .teknologi{
