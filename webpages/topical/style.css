@@ -18,7 +18,7 @@ main{
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
   right: 10px; 
@@ -37,7 +37,6 @@ main{
 }
 
 .navigasjonsbar a:hover{
-  background-color: #e1dad800;
   color: #e1dad8;
 }
 
