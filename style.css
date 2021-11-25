@@ -1,27 +1,36 @@
-
+/**/
 html{
   scroll-behavior: smooth;
 }
  
+html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    /*Sørger for at alle paragrafer, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
+    font-size: 20px;
+}
+
 body{
-  background-color: #EFEAE4;
+  background-color: #f3f1ed;
   width: 100%;
-  position:absolute;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 main{
-  
   width: 100%;
   margin: auto;
-  
 }
 
-/*Navigasjon*/
+/* Navigasjon */
 .navigasjonsbar{
-  position: absolute;
+  position: fixed;
   background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
@@ -29,75 +38,50 @@ main{
   height: 63px;
 }
 
-
 .navigasjonsbar a{
+  /*Legger til en hitbox for meny-knappen*/
   float:right;
   display:block;
-  color: whitesmoke;
+  color: #e1dad8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-
 .side-nav{
+  /*Sidemenyen som dekker skjermen, avhengig av enhet*/
+  position: fixed;
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 90;
   top: 0;
   left: 0;
-  background-color: whitesmoke; 
+  z-index: 90;
   opacity: 1;
+  background-color: #5D574B; 
   overflow-x:hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
 
 .side-nav a{
+  /*Nav-knapper med størrelse avhengig av parent's width*/
+  display:block;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
+  color: #FFFFFF; 
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#4E4841; 
-  display:block;
   transition: 0.3s;
 }
-
-/*
-.side-nav{
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 90;
-  top: 0;
-  left: 0;
-  background-color: #9c9584; 
-  opacity: 1;
-  overflow-x:hidden;
-  padding-top: 60px;
-  transition: 0.5s;
-}
-
-.side-nav a{
-  padding: 10px 10px 10px 30px;
-  text-decoration: none;
-  font-size: 80px;
-  line-height: 1.3;
-  font-weight: bold;
-  color:#e1dad8; 
-  display:block;
-  transition: 0.3s;
-}
-*/
 
 .side-nav a:hover{
-  color: #3a3937;
+  color: #4E4841;
 }
 
 .side-nav .btn-close{
+  /*Kryss-ut knapp som overlapper menyknappen*/
   position: absolute;
   top: -23px;
   right: 8px;
@@ -106,7 +90,7 @@ main{
 }
 
 #go_top{
-  
+  /*Gå til topp knapp som alltid er på skjermen.*/
   position: fixed; 
   bottom: 10px; 
   right: 10px; 
@@ -122,22 +106,24 @@ main{
 
 /*Hero og Tittel*/
 .hero {
+  /*Forside som er på størrelsen av enhetens høyde og bredde.*/
   width:100vw;
   height:100vh;
-  
   background-size:cover;
   display:flex;
-  ;
-  
   align-items: center;
   justify-content: center;
 }
 
+
 .title {
+  /*Tittel med typing animasjon, basert på lengden av tekst og antall bokstaver*/
   width: 30ch;
   animation: typing 2s steps(30), blink .5s step-end infinite alternate;
   white-space: nowrap;
+  /*Sørger for at teksten ikke vises før animasjonen er utført*/
   overflow: hidden;
+  /*Typewriter pekeren*/
   border-right: 3px solid;
   font-family: monospace;
   font-size: 85px;
@@ -146,6 +132,7 @@ main{
 }
 
 @keyframes typing {
+  /*Starter fra bredde 0 og slutter på bredden i .title*/
   from {
     width: 0
   }
@@ -156,6 +143,7 @@ main{
     border-color: transparent
   }
 }
+
 .velkommen h3{
   font-size: 50px;
 }
@@ -167,11 +155,6 @@ main{
   border-width: 1.5px 0px 0 0px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.velkommen > p {
-  line-height: 1.3cm;
-  font-size: 20px;
 }
 
 /*Main > Articles*/
@@ -225,7 +208,7 @@ main > article:nth-child(-n+2){
   display:inline-block;
   padding:0.35em 1.2em;
   margin:0 0.3em 0.3em 0;
-  background-color: #EFEAE4;
+  background-color: #f3f1ed;
   border:2px solid #9c9584;
   border-radius:0.12em;
   box-sizing: border-box;
@@ -252,9 +235,7 @@ main > article:nth-child(-n+2){
   margin-left: auto;
   margin-right: auto;
 }
-.footer p{
-  font-size:20px;
-}
+
 
 @media only screen and (max-width:800px){
   html [class] > p, 
@@ -266,6 +247,11 @@ main > article:nth-child(-n+2){
     font-size: 16px;
     line-height: .7cm;
 }
+
+  .navigasjonsbar{
+    position:absolute;
+  }
+  
   .hero{
     width:100%;
   }

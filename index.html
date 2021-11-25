@@ -10,11 +10,7 @@
     <meta name="description" content="Main page">
     <!--Styles and Scripts-->
     <link rel='stylesheet' type='text/css' media='screen' href="style.css">
-    <script src='main.js'></script>
-    <!---->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
     
     
 </head>
@@ -22,19 +18,20 @@
 <body>
     <!--Navigation-->
     <header>
-        
+        <!--Menyknapp som aktiverer funksjon "openSlideMeny()" ved tastetrykk-->
         <nav class="navigasjonsbar" >
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a onclick="openSlideMenu()">
                 <img src="svg/menubar.svg" width="30" height="30" alt="navigasjonsmeny">
             </a>
         </span>
 
         
         </nav>
-
+        <!--Sidemenyen som inneholder navigasjonsknapper-->
         <div id="side-menu" class="side-nav" >
-            <a href="#" class="btn-close" onclick="closeSlideMenu()" >&times;</a>
+            <!--Gå-ut knapp som aktiverer "closeSlideMenu()" ved tastetrykk-->
+            <a class="btn-close" onclick="closeSlideMenu()" >&times;</a>
             <a href="index.html" >Velkommen!</a>
             <a href="webpages/reflection/livet_som_student.html" >Livet som student</a>
             <a href="webpages/accessibility/universell_utforming.html" >Universell utforming</a>
@@ -42,6 +39,7 @@
             <a href="webpages/fun/moro.html" >Moro</a>
         </div>
         
+        <!--Forsidebilde med tittel-->
         <div class="hero">
             <h1 class="title">
                 Final Assignment - Gruppe 1200
@@ -51,6 +49,7 @@
         
     </header>
     
+    <!--"Gå til topps"-knapp med funksjon "goTop()"-->
     <button onclick="goTop()" id="go_top" title="Go to the top"><img src="svg/goup.svg" width="30" height="30" alt="Knapp til topp"></button>
 
     <!--Main-->
@@ -67,7 +66,7 @@
  
   
                   <p>  Denne nettsiden vil gi deg innblikk i livet som første-års student, hvordan vi sikret universell utforming, 
-                     tidligere leverte oppgaver i faget teknologi og samfunn, og en kreativ side som viser hvem vi, i gruppe 1200, er som webdesignere. <br></p>
+                     tidligere leverte oppgaver i faget teknologi og samfunn, og en kreativ side som viser hvem vi, i gruppe 1200, er som webdesignere. </p>
             </div> 
  
          </article>
@@ -97,15 +96,18 @@
     <!--Scripts-->
     <script>
         function openSlideMenu(){
+            //Tar til seg gjenstanden "side-menu" og åpner den ved å sette bredden fra 0 til 100%.
             document.getElementById('side-menu').style.width="100%";
-            document.getElementById('main').style.marginLeft="300px";
+            
         }
         function closeSlideMenu(){
-            document.getElementById('side-menu').style.width="0px";
-            document.getElementById('main').style.marginLeft="0px";
+            //Tar til seg "side-menu" og lukker den ved å bredde 0%.
+            document.getElementById('side-menu').style.width="0%";
+            
         }
 
         function goTop(){
+            //Går til toppen av body, toppen av siden.
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }

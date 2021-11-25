@@ -9,8 +9,8 @@
     <meta name="author" content="Gruppe 1200">
     <meta name="description" content="Accessibility">
     <!--Styles and Scripts-->
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='access-style.css'>
+    
 </head>
 <body>
     <!--Navigation-->
@@ -18,7 +18,7 @@
         
         <nav class="navigasjonsbar">
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a onclick="openSlideMenu()">
                 <img src="../../svg/menubar.svg" width="30" height="30" color alt="navigasjonsbar">
             </a>
         </span>
@@ -27,7 +27,7 @@
         </nav>
 
         <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="../../index.html">Velkommen!</a>
             <a href="../reflection/livet_som_student.html">Livet som student</a>
             <a href="universell_utforming.html">Universell utforming</a>
@@ -41,50 +41,37 @@
             </h1>
         </div>
 
-        <script>
-            function openSlideMenu(){
-                document.getElementById('side-menu').style.width="100%";
-                document.getElementById('main').style.marginLeft="300px";
-            }
-            function closeSlideMenu(){
-                document.getElementById('side-menu').style.width="0px";
-                document.getElementById('main').style.marginLeft="0px";
-            }
-            function goTop(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        </script>
+        
     </header>
     
     <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Knapp tilbake til toppen"></button>
 
     <main>
         <article>
-            <div class ="automated-test" tabindex="0">
-                <h2>WAVE</h2>
-                <p>
-                
-                    Vi brukte chrome extension "WAVE Evaluation Tool" for å teste nettsidens tilgjengelighet. Bildet viser resultatene fra første gangen vi bruke WAVE. De 3 feilene var at vi manglet alternative text til 2 av bildene vi har brukt, og vi glemte å deklarere språket. I tillegg så hadde vi hoppet over et heading nivå. 
-
-                    <img src="../../images/accessibility_images/1. utgave.PNG" alt="Resultater fra WAVE">
-                </p>
-
-                <p>
-
-                    <img src="../../images/accessibility_images/Kontrast.PNG" alt="Kontrast for lavt">
-                </p>
-
-                <p>
-                    Slutt resultatet?
-
-                    <img src="../../images/accessibility_images/2. utgave.PNG" alt="">
-                </p>
+            <div class ="wave">
+                <div class="wave-img"><img src="../../images/accessibility_images/1. utgave.PNG" alt="Resultater fra WAVE"></div>
+                <div class="wave-tittel"><h2>WAVE</h2></div>
+                <div class ="wave-tekst">
+                    <p>
+                        Vi brukte chrome extension "WAVE Evaluation Tool" for å teste nettsidens tilgjengelighet. Bildet viser resultatene fra første gangen vi bruke WAVE. De 3 feilene var at vi manglet alternative text til 2 av bildene vi har brukt, og vi glemte å deklarere språket. I dette tilfellet så hadde vi hoppet over et heading nivå. 
+                    </p>
+                </div>
             </div>
         </article>
         <article>
-            <div class="universal-design" tabindex="0">
-                <h3>Universell design</h3>
+            <div class ="kontrast">
+                <div class="kontrast-img"><img src="../../images/accessibility_images/Kontrast.PNG" alt="Kontrast for lavt"></div>
+                <div class="kontrast-tittel"><h2>Kontrast</h2></div>
+                <div class="kontrast-tekst">
+                    <p>
+                        Den første utgaven av navigasjonsmenyen vår hadde en bakgrunnsfarge #EFEAE4 hvor teksten sto skrevet med #9C9584. Ifølge WCAG sine retningslinjer var det for lav kontrast mellom tekst og bakgrunnsfargen vi opprinnelig valgte. Heldigvis har WAVE en funksjon som lar deg justere lysstyrken til både tekst og bakgrunnsfarge helt til den oppfyller de nødvendige kontrastforholdene. 
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="universell-design">
+                <div class="universell-tittel"><h3>Universell design</h3></div>
                 <p>
                     Web Content Accessibility Guidelines (WCAG) samarbeider med individer og organisasjoner med et mål om a skape en standard som møter folkets behov. 
                     Dokumenter av <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> informerer og forklarer hvordan én kan gjøre innholdet sitt mer tilgjengelig for folk med hemninger. 
@@ -96,29 +83,27 @@
                     </ul>
                 <p>Etter flere forsøk med farger og struktur, bestemte vi oss for å rette fokus mer på tilgjengelighet. 
                     Vi satte vekt på struktur av både kode og innhold, samt presentasjon slik at brukeren ikke skal ha et problem med å forstå og lese hva som står på nettsiden. 
-                    I all hovedsak, følger gruppen <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> sine retningslinjer, med unntak av retningslinje 3.3 <cite><a href="https://www.w3.org/WAI/WCAG21/Understanding/input-assistance" target="_blank">Input Assistance</a></cite> ettersom det ikke tas i bruk bruker-input, annet enn tastetrykk.</p>
+                    I all hovedsak, følger gruppen <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> sine retningslinjer, med unntak av noen få retningslinjer som ikke var relevante for nettsiden vår. For eksempel retningslinje 3.3 <cite><a href="https://www.w3.org/WAI/WCAG21/Understanding/input-assistance" target="_blank">Input Assistance</a></cite> ettersom det ikke tas i bruk bruker-input, annet enn tastetrykk. Følgende punkter er retningslinjer vi forholder oss til:</p>
                     <div class="WCAG">
                         <h4><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></h4>
                         <ol>
-                            <li>Text Alternatives: Provide text alternatives for any non-text content.</li>
-                            <li>Time-based media: Provide alternatives for time-based media.</li>
-                            <li>Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</li>
-                            <li>Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</li>
-                            <li>Keyboard Accessible: Make all functionality available from a keyboard.</li>
-                            <li>Enough Time: Provide users enough time to read and use content.</li>
-                            <li>Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.</li>
-                            <li> – Navigable: Provide ways to help users navigate, find content, and determine where they are.</li>
-                            <li> <strong>3.1 – Readable:</strong> Make text content readable and understandable.</li>
-                            <li> <strong>3.2 – Predictable:</strong> Make Web pages appear and operate in predictable ways.</li>
-                            <li>3.3 – Input Assistance: Help users avoid and correct mistakes.</li>
-                            <li>4.1 – Compatible Maximize compatibility with current and future user agents, including assistive technologies.</li>
+                            <li><strong>1.1 - Text Alternatives:</strong> Provide text alternatives for any non-text content.</li>
+                            <li><strong>1.3 Adaptable:</strong> Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</li>
+                            <li><strong>1.4 - Distinguishable:</strong> Make it easier for users to see and hear content including separating foreground from background.</li>
+                            <li><strong>2.1 - Keyboard Accessible:</strong> Make all functionality available from a keyboard.</li>
+                            <li><strong>2.2 - Enough Time:</strong> Provide users enough time to read and use content.</li>
+                            <li><strong>2.3 - Seizures and Physical Reactions:</strong> Do not design content in a way that is known to cause seizures or physical reactions.</li>
+                            <li><strong>2.4 – Navigable:</strong> Provide ways to help users navigate, find content, and determine where they are.</li>
+                            <li><strong>3.1 – Readable:</strong> Make text content readable and understandable.</li>
+                            <li><strong>3.2 – Predictable:</strong> Make Web pages appear and operate in predictable ways.</li>
+                            <li><strong>4.1 – Compatible:</strong> Maximize compatibility with current and future user agents, including assistive technologies.</li>
                         </ol>
                     </div>
             </div>
         </article>
         <article>
-            <div>
-                <h5>Tekst og lesbarhet</h5>
+            <div class="lesbarhet">
+                <div class="lesbarhet-tittel"><h5>Tekst og lesbarhet</h5></div>
                 <div>
                     <p>
                         Vide skjermer
@@ -152,17 +137,37 @@
             </div>
         </article>
         <article>
-            <div>
-                <p>Kilder: <br>
-                    <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG 2 checklist</a>
+            <div class="kilder">
+                <p>Kilder: 
+                    <button class="btn-kilder" onclick=" window.open('https://www.w3.org/WAI/WCAG21/quickref/', '_blank' )" > WCAG 2 checklist </button>
+                    <button class="btn-kilder" onclick=" window.open('https://www.w3.org/WAI/WCAG21/Understanding/input-assistance', '_blank' )" > Input Assistance </button>
                 </p>
             </div>
         </article>
     </main>
+
+    <!--Footer-->
     <footer>
         <div class="footer">
         <p>Gruppe 1200 @ 2021</p>
         </div>
     </footer>
+
+    <!--Scripts-->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width="100%";
+            
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width="0%";
+            
+        }
+
+        function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

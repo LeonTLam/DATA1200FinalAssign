@@ -6,7 +6,7 @@ html{
 }
 
 body{
-  background-color: #EFEAE4;
+  background-image:linear-gradient( #E5FCC2, #9DE0AD, #45ADA8);
   width: 100%;
   padding: 0;
   margin: 0;
@@ -22,7 +22,7 @@ main{
 
 /*Navigasjon*/
 .navigasjonsbar{
-  position: absolute;
+  position: fixed;
   background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
@@ -51,7 +51,11 @@ main{
   z-index: 90;
   top: 0;
   left: 0;
-  background-color: whitesmoke; 
+  background-image: linear-gradient(45deg, #9DE0AD 25%, 
+  #E5FCC2 25%, #E5FCC2 50%, 
+  #9DE0AD 50%, #9DE0AD 75%, 
+  #E5FCC2 75%, #E5FCC2 100%);
+  background-size: 400px 400px;
   opacity: 1;
   overflow-x:hidden;
   padding-top: 60px;
@@ -63,14 +67,10 @@ main{
   text-decoration: none;
   font-size: 80px;
   line-height: 1.3;
-  font-weight: bold;
-  color:#4E4841; 
+  font-weight: bolder;
+  color: black; 
   display:block;
   transition: 0.3s;
-}
-
-.side-nav a:hover{
-  color: #4E4841;
 }
 
 .side-nav .btn-close{
@@ -91,9 +91,9 @@ main{
 .hero {
   width:100%;
   height:100vh;
-  /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
-  background-size:cover;
-  background-attachment: fixed;
+  background:url(../../images/moro_images/badstuforening.jpg) center no-repeat;
+  
+  
   display:flex;
   align-items: center;
   justify-content: center;
@@ -118,10 +118,15 @@ main{
   margin-right: auto
 }
 
-@media(max-width:650px){
-  .side-nav a{
-    font-size: 35px;
-    margin: 5rem 0 5rem 0;
+@media(max-width:800px){
+  .navigasjonsbar{
+    position:absolute;
+  }
+  
+  .side-nav a:not(a:nth-child(1)){
+    font-size: 40px;
+    padding:50px 0 50px 25px;
+    
   }
 
 

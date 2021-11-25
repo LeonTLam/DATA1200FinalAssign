@@ -9,8 +9,8 @@
     <meta name="author" content="Gruppe 1200">
     <meta name="description" content="Topical">
     <!--Styles and Scripts-->
-    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="topic-style.css">
+    
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         
         <nav class="navigasjonsbar">
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a onclick="openSlideMenu()">
                 <img src="../../svg/menubar.svg" width="30" height="30" color alt="Navigasjonsmeny">
             </a>
         </span>
@@ -28,7 +28,7 @@
         </nav>
 
         <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="../../index.html">Velkommen!</a>
             <a href="../reflection/livet_som_student.html">Livet som student</a>
             <a href="../accessibility/universell_utforming.html">Universell utforming</a>
@@ -40,20 +40,7 @@
             <h1 class="title">Teknologi og samfunn</h1>
         </div>
 
-        <script>
-            function openSlideMenu(){
-                document.getElementById('side-menu').style.width="100%";
-                document.getElementById('main').style.marginLeft="300px";
-            }
-            function closeSlideMenu(){
-                document.getElementById('side-menu').style.width="0px";
-                document.getElementById('main').style.marginLeft="0px";
-            }
-            function goTop(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        </script>
+        
     </header>
     
     <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Gå tilbake til toppen"></button>
@@ -87,8 +74,8 @@
                     Falske nyheter kan blant annet være clickbait, propaganda (ofte politisk propaganda), satire, dårlig journalisme eller misledende overskrifter. 
                     I 2013 var det noen som hacket Assosiated Press (AP) sin Twitter konto og la ut denne tweeten: 
                     “Breaking: Two explosions in the White House and Barack Obama is injured”. Denne tweeten førte til at det amerikanske børsmarkedet var i fritt fall og sank med 143 poeng. 
-                    Et par minutter senere stabiliserte markedet seg igjen etter at AP fjernet tweeten. 
-                    Dette er et eksempel på hvor store konsekvenser falske nyheter kan ha, heldigvis var AP tidlig ute og fjernet tweeten, om de ikke hadde gjort dette kunne det blitt et stort fall i det internasjonale markedet. 
+                    Et par minutter senere stabiliserte markedet seg igjen etter at <abbr title="Assosiated Press">AP</abbr> fjernet tweeten. 
+                    Dette er et eksempel på hvor store konsekvenser falske nyheter kan ha, heldigvis var <abbr title="Assosiated Press">AP</abbr> tidlig ute og fjernet tweeten, om de ikke hadde gjort dette kunne det blitt et stort fall i det internasjonale markedet. 
                     Bilder kan også bidra til fake news. De bli manipulert for å vekke følelser, og med dagens teknologi har det blitt så lett å manipulere bilder uten at man legger merke til det. 
                     Et kjennetegn for falske nyheter kan være når informasjonen er for god til å være sann, da bør man undersøke hvem avsenderen er, og hvilke kilder avsenderen har brukt. 
                     Ved å være kritiske til kildene kan man fort se at nyheten er falsk ettersom at kildebruken ofte ikke inneholder nok informasjon til at leseren kan finne fram til dem opprinnelige kilden. </p>
@@ -114,9 +101,9 @@
             <div class="kilder">
                 <p>Sjekk ut våre kilder her:
 
-                    <button class="btn-sikkerhverdag" onclick=" window.open('https://www.sikkerhverdag.no/din-beredskap/varsling-og-informasjon/slik-avslorer-du-falske-nyheter/', '_blank' )" > Sikker hverdag </button>
-                    <button class="btn-falskenyheter" onclick=" window.open('https://ndla.no/nb/subject:1:51a7271b-a9d5-4205-bade-1c125a8650b5/topic:2:dac1fafd-44f0-459e-a17e-10207ff70f5e/topic:2:368430cc-6bf7-4213-a988-0a50510eccc8/resource:1:178071 ', '_blank' )" > Falske nyheter </button>
-                    <button class="btn-tweet" onclick=" window.open('https://eu.usatoday.com/story/theoval/2013/04/23/obama-carney-associated-press-hack-white-house/2106757/', 'blank' )" > AP Twitter </button>
+                    <button class="btn-kilder" id="btn-sikkerhverdag" onclick=" window.open('https://www.sikkerhverdag.no/din-beredskap/varsling-og-informasjon/slik-avslorer-du-falske-nyheter/', '_blank' )" > Sikker hverdag </button>
+                    <button class="btn-kilder" id="btn-falskenyheter" onclick=" window.open('https://ndla.no/nb/subject:1:51a7271b-a9d5-4205-bade-1c125a8650b5/topic:2:dac1fafd-44f0-459e-a17e-10207ff70f5e/topic:2:368430cc-6bf7-4213-a988-0a50510eccc8/resource:1:178071 ', '_blank' )" > Falske nyheter </button>
+                    <button class="btn-kilder" id="btn-tweet" onclick=" window.open('https://eu.usatoday.com/story/theoval/2013/04/23/obama-carney-associated-press-hack-white-house/2106757/', 'blank' )" > AP Twitter </button>
                        
                 </p>    
 
@@ -130,5 +117,22 @@
         <p>Gruppe 1200 @ 2021</p>
         </div>
     </footer>
+
+    <!--Scripts-->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width="100%";
+            
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width="0%";
+            
+        }
+
+        function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

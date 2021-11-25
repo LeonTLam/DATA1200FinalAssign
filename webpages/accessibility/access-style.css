@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+
+html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    /*Sørger for at alle paragrafer, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
+    font-size: 20px;
+}
+
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+ 
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li {
+    /*Sørger for at alle list-items, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
+    font-size: 20px;
+  }
+
+body{
+  background-color: #EFEAE4;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+main{
+  width: 100%;
+  margin: auto;
+}
+
+/* Navigasjon */
+.navigasjonsbar{
+  position: fixed;
+  background-color: rgba(245, 245, 245, );
+  overflow:hidden;
+  top: 10px; 
+  right: 10px; 
+  height: 63px;
+}
+
+.navigasjonsbar a{
+  /*Legger til en hitbox for meny-knappen*/
+  float:right;
+  display:block;
+  color: #9C9584;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.side-nav{
+  /*Sidemenyen som dekker skjermen, avhnegig av enhet*/
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  opacity: 1;
+  background-color: #9C9584; 
+  overflow-x:hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a{
+  /*Nav-knapper med størrelse avhengig av parent's width*/
+  display:block;
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  color:#f3f1ed; 
+  font-size: 80px;
+  line-height: 1.3;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.side-nav a:hover{
+  color: #4E4841;
+}
+
+.side-nav .btn-close{
+  /*Kryss-ut knapp som overlapper menyknappen*/
+  position: absolute;
+  top: -23px;
+  right: 8px;
+  font-size: 80px;
+  margin-left: 50px;
+}
+
+#go_top{
+  /*Gå til topp knapp som alltid er på skjermen.*/
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 89; 
+  border: none;
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
+}
+
+.hero {
+  width:100%;
+  height:100vh;
+  /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
+  background-color: whitesmoke;
+  background-size:cover;
+  background-attachment: fixed;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.title {
+  width: 20ch;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 85px;
+  font-weight: bold;
+  color: #4E4841;
+}
+
+ol{
+  list-style-type: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/*Main > Articles*/
+
+main > article:nth-child(-n+2){
+  padding: 0px 50px 75px 50px;
+}
+
+
+
+.wave{
+  width: 60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid; 
+  grid-template-columns: 1fr .7fr; 
+  grid-template-rows: 0.3fr 1.3fr; 
+  gap: 0px 50px; 
+  grid-template-areas: 
+    "wave-tittel wave-tittel"
+    "wave-tekst wave-img"; 
+}
+
+.wave-tittel{
+  grid-area: wave-tittel;
+  font-size: 40px;
+  
+}
+
+.wave-img{
+  grid-area: wave-img;
+  display:inline-block;
+  max-width: 100%;
+}
+
+.wave-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wave-tekst{
+  grid-area: wave-tekst;
+  font-size: 20px;
+  line-height: 1.3cm;
+  
+}
+
+
+.kontrast{
+  width:60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left:auto;
+  margin-right: auto;
+  display: grid; 
+  grid-template-columns: .7fr 1fr; 
+  grid-template-rows: 0.3fr 1.3fr; 
+  gap: 0px 50px; 
+  grid-template-areas: 
+    "kontrast-tittel kontrast-tittel"
+    "kontrast-img kontrast-text"; 
+}
+
+.kontrast-tittel{
+  grid-area: kontrast-tittel;
+  font-size: 40px;
+  
+}
+
+.kontrast-img{
+  grid-area: kontrast-img;
+  display:inline-block;
+  max-width: 100%;
+}
+
+.kontrast-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontrast-text{
+  grid-area: kontrast-text;
+  font-size: 20px;
+  line-height: 1.3cm;
+  text-align: center;
+}
+
+.universell-design{
+  width: 60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.universell-tittel{
+  font-size: 40px;
+}
+
+
+
+.lesbarhet{
+  width: 60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lesbarhet-tittel{
+  font-size: 40px;
+}
+
+.kilder{
+  width: 60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-kilder {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:2px solid #9c9584;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  font-size: 20px;
+  background-color: #EFEAE4;
+  text-align:center;
+  
+}
+.btn-kilder:hover {
+  cursor:pointer;
+  background-color: #9C9584;
+}
+
+#go_top{
+  
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 89; 
+  border: none;
+  
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
+}
+
+.footer{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+@media only screen and (max-width:800px){
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 16px;
+    line-height: .7cm;
+  }
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li  {
+    font-size: 16px;
+    line-height: .7cm;
+  }
+
+  .navigasjonsbar{
+    position: fixed;
+  }
+  
+  .hero{
+    width:100%;
+  }
+
+  .side-nav a:not(a:nth-child(1)){
+    font-size: 40px;
+    padding:50px 0 50px 25px;
+    
+  }
+
+  .title{
+    font-size:40px;
+  }
+
+  main > article:nth-child(-n+5){
+    padding: 0px 0px 75px 0px;
+  }
+
+  .wave{
+    width: 90vw;
+  }
+  .wave-tittel{
+    text-align: center;
+  }
+  
+  .kontrast{
+    width: 90vw;
+    gap: 0px 25px; 
+  }
+  .kontrast-tittel{
+    text-align: center;
+  }
+
+  .universell-design{
+    width: 90vw;
+  }
+  .universell-tittel{
+    text-align: center;
+  }
+
+
+  .lesbarhet{
+    width: 90vw;
+  }
+  .lesbarhet-tittel{
+    text-align: center;
+  }
+  
+  .kilder{
+    width:90vw;
+  }
+  .btn-kilder{
+    display:block;
+    margin:25px auto;
+  }
+
+  
+  .footer{
+    width:90vw;
+  }
+  
+}
+
+@media only screen and (min-width:800px) and (max-width:1500px) {
+  
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 18px;
+    line-height: .8cm;
+  }
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li {
+    font-size: 18px;
+    line-height: .8cm;
+  }
+  .wave{
+    width: 80vw;
+  }
+  .wave-tittel{
+    text-align: center;
+  }
+
+  .kontrast{
+    width: 80vw;
+  }
+  .kontrast-tittel{
+    text-align: center;
+  }
+
+  .universell-design{
+    width: 80vw;
+  }
+  .universell-tittel{
+    text-align: center;
+  }
+
+  .lesbarhet{
+    width: 80vw;
+  }
+  .lesbarhet-tittel{
+    text-align: center;
+  }
+
+  .kilder{
+    width:80vw;
+  }
+
+
+  .footer{
+    width:80vw;
+  }
+  .footer{
+    width:80vw;
+  }
+}

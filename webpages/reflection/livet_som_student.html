@@ -10,15 +10,15 @@
     <meta name="author" content="Gruppe 1200">
     <meta name="description" content="Reflection">
     <!--Styles and Scripts-->
-    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="refle-style.css">
+    
 </head>
     <!--Navigation-->
     <header>
        
         <nav class="navigasjonsbar">
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a onclick="openSlideMenu()">
                 <img src="../../svg/menubar.svg" width="30" height="30" color alt="navigasjonsmeny">
             </a>
         </span>
@@ -27,7 +27,7 @@
         </nav>
 
         <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="../../index.html">Velkommen!</a>
             <a href="livet_som_student.html">Livet som student</a>
             <a href="../accessibility/universell_utforming.html">Universell utforming</a>
@@ -43,21 +43,7 @@
 
         <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Gå tilbake til toppen"></button>
 
-        <script>
-            function openSlideMenu(){
-                document.getElementById('side-menu').style.width="100%";
-                document.getElementById('main').style.marginLeft="300px";
-            }
-            function closeSlideMenu(){
-                document.getElementById('side-menu').style.width="0px";
-                document.getElementById('main').style.marginLeft="0px";
-            }
-          
-            function goTop(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        </script>
+        
     </header>
     
    
@@ -129,5 +115,22 @@
         <p>Gruppe 1200 @ 2021</p>
         </div>
     </footer>
+
+    <!--Scripts-->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width="100%";
+            
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width="0%";
+            
+        }
+
+        function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

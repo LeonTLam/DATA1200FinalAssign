@@ -6,24 +6,35 @@ html{
   scroll-behavior: smooth;
 }
 
+html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    /*Sørger for at alle paragrafer, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
+    font-size: 20px;
+}
+
 body{
-  background-color: #EFEAE4;
+  background-color: #f3f1ed;
   width: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
+
 
 main{
-  
   width: 100%;
   margin: auto;
-  
 }
 
-/*Navigasjon*/
+/* Navigasjon */
 .navigasjonsbar{
-  position: absolute;
+  position: fixed;
   background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
@@ -31,41 +42,41 @@ main{
   height: 63px;
 }
 
-
 .navigasjonsbar a{
+  /*Legger til en hitbox for meny-knappen*/
   float:right;
   display:block;
-  color: whitesmoke;
+  color: #9C9584;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-
-
 .side-nav{
+  /*Sidemenyen som dekker skjermen, avhnegig av enhet*/
+  position: fixed;
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 90;
   top: 0;
   left: 0;
-  background-color: whitesmoke; 
+  z-index: 90;
   opacity: 1;
+  background-color: #f3f1ed; 
   overflow-x:hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
 
 .side-nav a{
+  /*Nav-knapper med størrelse avhengig av parent's width*/
+  display:block;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
+  color: #4F4F4F; 
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#4E4841; 
-  display:block;
   transition: 0.3s;
 }
 
@@ -74,11 +85,27 @@ main{
 }
 
 .side-nav .btn-close{
+  /*Kryss-ut knapp som overlapper menyknappen*/
   position: absolute;
   top: -23px;
   right: 8px;
   font-size: 80px;
   margin-left: 50px;
+  
+}
+
+#go_top{
+  /*Gå til topp knapp som alltid er på skjermen.*/
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 89; 
+  border: none;
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
 }
 
 /*Hero og Tittel*/
@@ -88,7 +115,7 @@ main{
   
   background-size:cover;
   display:flex;
-  background-image: linear-gradient(#534f46, #9c9584, #EFEAE4 );
+  background-image: linear-gradient(rgba(83,79,70,.7), rgba(156,149,132,.7), #f3f1ed );
   
   align-items: center;
   justify-content: center;
@@ -285,6 +312,10 @@ main > article:nth-child(-n+3){
     line-height: .7cm;
 }
   
+  .navigasjonsbar{
+    position:absolute;
+  }
+
   .side-nav a:not(a:nth-child(1)){
     font-size: 40px;
     padding:50px 0 50px 25px;

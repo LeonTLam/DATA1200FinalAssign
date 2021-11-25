@@ -10,7 +10,7 @@
     <meta name="description" content="Fun">
     <!--Styles and Scripts-->
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    
 </head>
 <body>
     <!--Navigation-->
@@ -18,7 +18,7 @@
         
         <nav class="navigasjonsbar">
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a onclick="openSlideMenu()">
                 <img src="../../svg/menubar.svg" width="30" height="30" color>
             </a>
         </span>
@@ -27,7 +27,7 @@
         </nav>
 
         <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="../../index.html">Velkommen!</a>
             <a href="../reflection/livet_som_student.html">Livet som student</a>
             <a href="../accessibility/universell_utforming.html">Universell utforming</a>
@@ -37,55 +37,65 @@
         
         <div class="hero">
             <h1 class="title">
-                Moro
+                Havnepromenaden
             </h1>
         </div>
         
     <article>
 
         <div class="havnepromenaden">
-            <h2> Havnepromenaden </h2>
+            <h2> Hva er havnepromonaden? </h2>
             <p> Havnepromenaden skal innen 2030 bli en 9 kilometer lang promenade langs havet, 
                 som skal ulike tilbud for alle brukergrupper, uansett årstid.  
                 Promenaden er markert med oransje fyrtårn som veileder deg til hvor neste attraksjon er. 
                 På tårnene finner du kunst og tavler som inneholder spennende fakta om området rundt. 
                 På den 9 kilometer lange promenaden finner du blant annet Sørenga, arkitektursafari i Bjørvika, 
                 saunaer og kunst på Langkaia.  </p>
+            <button class="btn-havnepromendaen" onclick=" window.open(' https://www.visitoslo.com/no/artikler/havnepromenaden/',' _blank' )" > Les mer her! </button>
                  
         </div>
         <div class="sørenga">
             <h2>Oslo´s nye bydel</h2>
-            <p>De siste årene har Sørenga blitt forvandlet fra et trist kontainer område til et av Oslo´s nye IT-steder. 
-               Sørenga har alt, alt fra leilighetskomplekser til et yrende restuarant liv. Alle byggende på 
-               Sørenga har hver sin interessante, arketektoniske utforming. Med flere grønt områder har Sørenga blitt et 
-               et ettertraktet sted å bosette seg. Men Sørenga er ikke bare ettertraktet for beboere. I sommermånedene er 
-               det er yrende folkeliv på Sørenga, for i tillegg til alle restaurantene finner man i tillegg ytterst på Sørenga, 
-               Sørenga Sjøbad. 
-               <br>Sørenga Sjøbad har blitt ett attraktivt sted blant ungdom. </p>
+            <p>De siste årene har Sørenga blitt forvandlet fra et trist kontainerområde til et av Oslo´s nye IT-steder. 
+               Sørenga har alt fra leilighetskomplekser til et yrende restaurantliv. Alle byggene på 
+               Sørenga har hver sin interessante, arkitektoniske utforming. Med flere grøntområder har Sørenga blitt et 
+               ettertraktet sted å bosette seg. Men Sørenga er ikke bare ettertraktet for beboere. I sommermånedene er 
+               det et yrende folkeliv på Sørenga, for i tillegg til alle restaurantene finner man i tillegg ytterst på Sørenga, 
+               Sørenga Sjøbad. Sørenga Sjøbad har blitt ett attraktivt sted blant ungdom. Sjøbadet har muligheter for både store og små.  
+               Her finner du blant annet barnebasseng, strand, saltvannsbasseng og gode muligheter til å slappe av.</p>
+        
         </div>
+
+        <div class="bjørvika">
+            <h2>Et lite stykke New York City</h2>
+            <p>Bjørvika har de siste årene blitt et område fylt med moderne arkitektur, her finner du blant annet shopping, 
+                barer, restauranter og masse mer som Deichmanske hovedbibliotek. Området er bygd opp på en måte som gjør at du 
+                får en følelse av å være i en annen by. Bjørvika har blitt et av de mange nye it-stedet, hvor Barcode står i fokus. 
+                Barcode har gitt Oslo en skyline, med eksklusive restauranter på rekke og rad. </p>
+        </div>   
+
         <div class="salt">
             <h2>SALT</h2>
-            <p>
+            <p>På veiene videre mot Frognerkilen finner du SALT, vis á vis Operaen. Store, spektakulære trekonstruksjoner 
+            inspirert av tradisjonelle norske fiskehjeller er en del av det fabelaktig kunstprosjekt som samler mat, musikk, 
+            historie og masse annet spennende på et og samme sted. Hos SALT finner du seks saunaer, her kan du booke din egen 
+            sauna eller booke ordinærbillett. Saunaene er bygd slik at du kan til enhver tid komme og oppholde deg her, både 
+            med venner og alene. </p>
+            <button class="salt" onclick=" window.open(' https://www.salted.no/',' _blank' )" > Les mer her! </button>
+        </div>
+
+        <div class="akershus">
+            <h2>Veien til Tjuvholmen</h2>
+            <p>...</p>
+        </div>
+
+        <div class="filipstad">
+            <h2>Filipstadkaia</h2>
+            <p>...</p>
+        </div>
+
     </article>
 
-
-
-
-
-        <script>
-            function openSlideMenu(){
-                document.getElementById('side-menu').style.width="100%";
-                document.getElementById('main').style.marginLeft="300px";
-            }
-            function closeSlideMenu(){
-                document.getElementById('side-menu').style.width="0px";
-                document.getElementById('main').style.marginLeft="0px";
-            }
-            function goTop(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        </script>
     </header>
     
     <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30"></button>
@@ -103,5 +113,22 @@
         <p>Gruppe 1200 @ 2021</p>
         </div>
     </footer>
+
+    <!--Scripts-->
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width="100%";
+            
+        }
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width="0%";
+            
+        }
+
+        function goTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

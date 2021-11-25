@@ -1,46 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
 /*Generell*/
 html{
   scroll-behavior: smooth;
 }
 
-body{
-  background-color: #EFEAE4;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-main{
-  
-  width: 100%;
-  margin: auto;
-  
-}
-
-  html [class] > p, 
+html [class] > p, 
   html * > * > p,
   html [class] > * > p,
   html [id] > * > p,
   html [class] > * > * > p,
   html [id] > * > * > p {
+    /*Sørger for at alle paragrafer, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
     font-size: 20px;
-  line-height: 1.3cm;
-  }
-  html [class] > li, 
+}
+
+html [class] > li, 
   html * > * > li,
   html [class] >ol * > li,
   html [id] > * > li,
   html [class] > * > * > li,
   html [id] > * > * > li {
+    /*Sørger for at alle list-items, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
     font-size: 20px;
-  line-height: 1.3cm;
   }
 
-/*Navigasjon*/
+
+body{
+  background-color: #f3f1ed;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+main{
+  width: 100%;
+  margin: auto;
+}
+
+/* Navigasjon */
 .navigasjonsbar{
-  position: absolute;
+  position: fixed;
   background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
@@ -48,45 +51,41 @@ main{
   height: 63px;
 }
 
-
 .navigasjonsbar a{
+  /*Legger til en hitbox for meny-knappen*/
   float:right;
   display:block;
-  color: whitesmoke;
+  color: #f3f1ed;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-
-.navigasjonsbar a:hover{
-  color: #3a3937;
-}
-
-
 .side-nav{
+  /*Sidemenyen som dekker skjermen, avhnegig av enhet*/
+  position: fixed;
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 90;
   top: 0;
   left: 0;
-  background-color: whitesmoke; 
+  z-index: 90;
   opacity: 1;
+  background-color: rgb(150, 144, 135); 
   overflow-x:hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
 
 .side-nav a{
+  /*Nav-knapper med størrelse avhengig av parent's width*/
+  display:block;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
+  color:#f3f1ed; 
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#4E4841; 
-  display:block;
   transition: 0.3s;
 }
 
@@ -95,6 +94,7 @@ main{
 }
 
 .side-nav .btn-close{
+  /*Kryss-ut knapp som overlapper menyknappen*/
   position: absolute;
   top: -23px;
   right: 8px;
@@ -102,16 +102,28 @@ main{
   margin-left: 50px;
 }
 
+#go_top{
+  /*Gå til topp knapp som alltid er på skjermen.*/
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 89; 
+  border: none;
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
+}
+
 
 /*Hero og Tittel*/
 .hero {
   width:100vw;
   height:100vh;
-  
   background-size:cover;
   display:flex;
-  background-image: linear-gradient(#534f46, #9C9584 , #EFEAE4 );
-  
+  background-image: linear-gradient(rgba(83,79,70,.7), rgba(156, 149, 132, 0.658), #f3f1ed );
   align-items: center;
   justify-content: center;
 }
@@ -170,27 +182,9 @@ main h3{
   font-size: 40px;
 }
 
-.falske-nyheter {
-  width: 100%;
-  background-color: #EFEAE4;
-
-  border-style: solid;
-  border-width: 1.5px 0px 0 0px;
-  width: 60vw;
-  
-  margin-left: auto;
-  margin-right: auto
-  
-}
-
-
-
-
-
-
 .teknologi{
   width: 100%;
-  background-color: #EFEAE4 ;
+  background-color: #f3f1ed ;
   border-style: solid;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
@@ -199,7 +193,18 @@ main h3{
   margin-right: auto
 }
 
+.falske-nyheter {
+  width: 100%;
+  background-color: #f3f1ed;
 
+  border-style: solid;
+  border-width: 1.5px 0px 0 0px;
+  width: 60vw;
+  
+  margin-left: auto;
+  margin-right: auto
+  
+}
 
 
 .påvirkning {
@@ -211,9 +216,6 @@ main h3{
   margin-left: auto;
   margin-right: auto
 }
-
-
-
 
 .footer{
   border-style: solid;
@@ -232,7 +234,7 @@ main h3{
   margin-left: auto;
   margin-right: auto;
 }
-.btn-sikkerhverdag {
+.btn-kilder {
   display:inline-block;
   padding:0.35em 1.2em;
   border:2px solid #9c9584;
@@ -244,46 +246,11 @@ main h3{
   background-color: #EFEAE4;
   text-align:center;
 }
-.btn-sikkerhverdag:hover {
+.btn-kilder:hover {
   cursor:pointer;
   background-color: #9C9584;
 }
 
-.btn-falskenyheter {
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:2px solid #9c9584;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  font-family:sans-serif;
-  font-size: 20px;
-  background-color: #EFEAE4;
-  text-align:center;
-}
-
-.btn-falskenyheter:hover {
-  cursor: pointer;
-  background-color: #9c9584;
-}
-
-.btn-tweet {
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:2px solid #9c9584;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  font-family:sans-serif;
-  font-size: 20px;
-  background-color: #EFEAE4;
-  text-align:center;
-}
-
-.btn-tweet:hover {
-  cursor: pointer;
-  background-color: #9c9584;
-}
 
 @media only screen and (max-width:800px){
   html [class] > p, 
@@ -301,10 +268,13 @@ main h3{
   html [id] > * > li,
   html [class] > * > * > li,
   html [id] > * > * > li {
-    font-size: 18px;
-    line-height: .8cm;
+    font-size: 16px;
+    line-height: .7cm;
   }
 
+  .navigasjonsbar{
+    position:absolute;
+  }
 
   .hero{
     width:100%;
@@ -338,17 +308,9 @@ main h3{
     width:90vw;
   }
   
-  .btn-sikkerhverdag{
+  .btn-kilder{
     display:block;
-    margin:0.4em auto;
-  }
-  .btn-falskenyheter{
-    display:block;
-    margin:2rem auto;
-  }
-  .btn-tweet{
-    display:block;
-    margin:0.4em auto;
+    margin:25px auto;
   }
 
   .kilder{
@@ -402,8 +364,6 @@ main h3{
   .kilder{
     width:80vw;
   }
-
-  
 
   .footer{
     width:80vw;
