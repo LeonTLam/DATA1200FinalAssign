@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+/*Generell*/
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-  font-family: sans-serif;
-  background-color: #9C9584;
+  background-color: #EFEAE4;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: sans-serif;
 }
 
 main{
-  background-color: #9C9584;
+  
   width: 100%;
   margin: auto;
   
@@ -18,7 +22,7 @@ main{
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
   right: 10px; 
@@ -29,17 +33,14 @@ main{
 .navigasjonsbar a{
   float:right;
   display:block;
-  color: #e1dad8;
+  color: whitesmoke;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-.navigasjonsbar a:hover{
-  background-color: #e1dad800;
-  color: #e1dad8;
-}
+
 
 .side-nav{
   height: 100%;
@@ -48,7 +49,7 @@ main{
   z-index: 90;
   top: 0;
   left: 0;
-  background-color: #e1dad8; 
+  background-color: whitesmoke; 
   opacity: 1;
   overflow-x:hidden;
   padding-top: 60px;
@@ -58,36 +59,65 @@ main{
 .side-nav a{
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 80px;
+  line-height: 1.3;
   font-weight: bold;
-  color: #9C9584; 
+  color:#9c9584; 
   display:block;
   transition: 0.3s;
 }
 
 .side-nav a:hover{
-  color: #000000;
+  color: #534f46;
 }
 
 .side-nav .btn-close{
   position: absolute;
-  top:-28px;
-  right: 10px;
+  top: -23px;
+  right: 8px;
   font-size: 80px;
   margin-left: 50px;
-
 }
 
+/*Hero og Tittel*/
 .hero {
-  width:100%;
+  width:100vw;
   height:100vh;
+  
   background-size:cover;
-  background-attachment: fixed;
   display:flex;
+  background-image: linear-gradient(#534f46, #9C9584 , #EFEAE4 );
+  
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
+
+.title {
+  width: 17ch;
+  animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 113px;
+  font-weight: bold;
+  color: #534f46
+}
+#go_top{
+  
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 89; 
+  border: none;
+  background-color: transparent;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 0px; 
+  
+}
+
+
 
 .title {
   width: 19.5ch;
@@ -136,7 +166,7 @@ h1,h3{
 
 .falske-nyheter {
   width: 100%;
-  background-color: #9C9584;
+  background-color: #EFEAE4;
 
   border-style: solid;
   border-width: 1.5px 0px 0 0px;
@@ -161,7 +191,7 @@ h1,h3{
 
 .teknologi{
   width: 100%;
-  background-color: #9C9584;
+  background-color: #EFEAE4 ;
   border-style: solid;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
@@ -169,7 +199,7 @@ h1,h3{
   margin-left: auto;
   margin-right: auto
 }
-.teknologi-tittel > h1{
+.teknologi-tittel > h3{
   font-size: 40px;
 }
 
@@ -191,9 +221,7 @@ h1,h3{
 .påvirkning-tittel {
   font-size: 40px;
 }
-.påvirkning a:hover {
-  color: #534f46;
-}
+
 .påvirkning-parag3 > p {
   font-size: 20px;
   line-height: 1.3cm;
@@ -216,20 +244,7 @@ h1,h3{
   margin-right: auto
 }
 
-#go_top{
-  
-  position: fixed; 
-  bottom: 10px; 
-  right: 10px; 
-  z-index: 89; 
-  border: none;
-  
-  background-color: transparent;
-  cursor: pointer; 
-  padding: 15px; 
-  border-radius: 0px; 
-  
-}
+
 
 @media(max-width:650px){
   .side-nav a{

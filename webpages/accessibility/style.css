@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-  font-family: 'Arial', Arial, Helvetica, sans-serif;
-  background-color: whitesmoke;
+  background-color: #EFEAE4;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: sans-serif;
 }
 
 main{
-  background-color: whitesmoke;
+  background-color: #9C9584;
   width: 100%;
   margin: auto;
+  
 }
 
-.velkommen h1{
-  font-size: 50px;
-}
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0);
   overflow:hidden;
   top: 10px; 
   right: 10px; 
@@ -31,17 +32,14 @@ main{
 .navigasjonsbar a{
   float:right;
   display:block;
-  color: #e1dad8;
+  color: whitesmoke;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-.navigasjonsbar a:hover{
-  background-color: #e1dad800;
-  color: #9C9584;
-}
+
 
 .side-nav{
   height: 100%;
@@ -50,7 +48,7 @@ main{
   z-index: 90;
   top: 0;
   left: 0;
-  background-color: #9C9584; 
+  background-color: #9c9584; 
   opacity: 1;
   overflow-x:hidden;
   padding-top: 60px;
@@ -60,7 +58,8 @@ main{
 .side-nav a{
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 80px;
+  line-height: 1.3;
   font-weight: bold;
   color:#e1dad8; 
   display:block;
@@ -68,13 +67,13 @@ main{
 }
 
 .side-nav a:hover{
-  color: #000000;
+  color: #534f46;
 }
 
 .side-nav .btn-close{
   position: absolute;
-  top:-28px;
-  right: 10px;
+  top: -23px;
+  right: 8px;
   font-size: 80px;
   margin-left: 50px;
 }
