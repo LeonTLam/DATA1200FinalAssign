@@ -20,6 +20,7 @@ body{
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  /*Skjuler horizontal scrollbar*/
   overflow-x: hidden;
 }
 
@@ -32,6 +33,7 @@ main{
 .navigasjonsbar{
   position: fixed;
   background-color: rgba(245, 245, 245, 0);
+  /*Sørger for at menybaren er gjømt, frem til den åpnes*/
   overflow:hidden;
   top: 10px; 
   right: 10px; 
@@ -59,7 +61,6 @@ main{
   z-index: 90;
   opacity: 1;
   background-color: #5D574B; 
-  overflow-x:hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
@@ -77,6 +78,7 @@ main{
 }
 
 .side-nav a:hover{
+  /*Endrer farge når man holder muspekeren over*/
   color: #4E4841;
 }
 
@@ -160,10 +162,12 @@ main{
 /*Main > Articles*/
 
 main > article:nth-child(-n+2){
+  /*Gir alle articler fra første til andre artikkel padding*/
   padding: 0px 50px 75px 50px;
 }
 
 .oslomet-container{
+  /*Grid container med grid-gjenstander nedover*/
   width:60vw;
   border-style: solid;
   border-color: #000000;
@@ -205,6 +209,7 @@ main > article:nth-child(-n+2){
 }
 
 .btn-oslomet{
+  /*Styling til en knapp som redirecter brukeren til en nettside*/
   display:inline-block;
   padding:0.35em 1.2em;
   margin:0 0.3em 0.3em 0;
@@ -219,6 +224,7 @@ main > article:nth-child(-n+2){
 }
 
 .btn-oslomet:hover{
+  /*Endrer farge når brukeren holder pekeren over*/
   cursor:pointer;
   background-color: #9C9584;
 }
@@ -236,7 +242,7 @@ main > article:nth-child(-n+2){
   margin-right: auto;
 }
 
-
+/*Media query til "små skjermer"*/
 @media only screen and (max-width:800px){
   html [class] > p, 
   html * > * > p,
@@ -244,19 +250,22 @@ main > article:nth-child(-n+2){
   html [id] > * > p,
   html [class] > * > * > p,
   html [id] > * > * > p {
+    /*Gir alle paragrafer gitt styling*/
     font-size: 16px;
     line-height: .7cm;
 }
 
   .navigasjonsbar{
+    /*Setter menyknappen på toppen av skjermen, slik den ikke er i veien for tekst og innhold*/
     position:absolute;
   }
-  
+
   .hero{
     width:100%;
   }
 
   .side-nav a:not(a:nth-child(1)){
+    /*Endrer font og lager mellomrom mellom meny-gjenstandene, UTENOM "kryss-ut" knappen*/
     font-size: 40px;
     padding:50px 0 50px 25px;
     
@@ -267,6 +276,7 @@ main > article:nth-child(-n+2){
   }
 
   main > article:nth-child(-n+2){
+    /*Fjerner padding på sidene av alle artikkler, ettersom width blir 90vw*/
     padding: 0px 0px 75px 0px;
   }
 
@@ -287,6 +297,7 @@ main > article:nth-child(-n+2){
   
 }
 
+/*Media query for "mellomstore enheter"*/
 @media only screen and (min-width:800px) and (max-width:1500px) {
   
   html [class] > p, 
@@ -295,6 +306,7 @@ main > article:nth-child(-n+2){
   html [id] > * > p,
   html [class] > * > * > p,
   html [id] > * > * > p {
+    
     font-size: 18px;
     line-height: .8cm;
 }
