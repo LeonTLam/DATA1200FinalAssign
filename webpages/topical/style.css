@@ -40,7 +40,13 @@ main{
   font-size: 17px;
 }
 
+<<<<<<< HEAD
 
+=======
+.navigasjonsbar a:hover{
+  color: #e1dad8;
+}
+>>>>>>> 161b6a17f3314a4a6f5af489bb44a9183004b5b3
 
 .side-nav{
   height: 100%;
