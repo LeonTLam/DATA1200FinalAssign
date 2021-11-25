@@ -19,6 +19,25 @@ main{
   
 }
 
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 20px;
+  line-height: 1.3cm;
+  }
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li {
+    font-size: 20px;
+  line-height: 1.3cm;
+  }
+
 /*Navigasjon*/
 .navigasjonsbar{
   position: absolute;
@@ -40,13 +59,11 @@ main{
   font-size: 17px;
 }
 
-<<<<<<< HEAD
 
-=======
 .navigasjonsbar a:hover{
-  color: #e1dad8;
+  color: #3a3937;
 }
->>>>>>> 161b6a17f3314a4a6f5af489bb44a9183004b5b3
+
 
 .side-nav{
   height: 100%;
@@ -68,13 +85,13 @@ main{
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#9c9584; 
+  color:#4E4841; 
   display:block;
   transition: 0.3s;
 }
 
 .side-nav a:hover{
-  color: #534f46;
+  color: #4E4841;
 }
 
 .side-nav .btn-close{
@@ -84,6 +101,7 @@ main{
   font-size: 80px;
   margin-left: 50px;
 }
+
 
 /*Hero og Tittel*/
 .hero {
@@ -99,15 +117,15 @@ main{
 }
 
 .title {
-  width: 17ch;
-  animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+  width: 20ch;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 1.5px solid;
   font-family: monospace;
   font-size: 113px;
   font-weight: bold;
-  color: #534f46
+  color: #4E4841;
 }
 #go_top{
   
@@ -123,19 +141,6 @@ main{
   
 }
 
-
-
-.title {
-  width: 19.5ch;
-  animation: typing 2s steps(19), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 113px;
-  font-weight: bold;
-  color: #534f46
-}
 
 @keyframes typing {
   from {
@@ -159,15 +164,10 @@ ol li{
   margin: 40px;
 }
 
-p{
-  padding: 1rem 2rem 1rem;
-  font-size: 17px;
-  font-family: sans-serif;
-  line-height: 0.75cm;
-}
 
-h1,h3{
-  padding: 0rem 2rem 1rem;
+
+main h3{
+  font-size: 40px;
 }
 
 .falske-nyheter {
@@ -177,22 +177,15 @@ h1,h3{
   border-style: solid;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
-  padding: 70px 50px 70px 50px;
+  
   margin-left: auto;
   margin-right: auto
   
 }
 
 
-.falske-nyheter-tittel {
-  font-size: 40px;
- 
-}
 
-.falske-nyheter-parag2 > p {
-  font-size: 20px;
-  line-height: 1.3cm;
-}
+
 
 
 .teknologi{
@@ -201,68 +194,220 @@ h1,h3{
   border-style: solid;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
-  padding: 70px 50px 70px 50px;
+  
   margin-left: auto;
   margin-right: auto
 }
-.teknologi-tittel > h3{
-  font-size: 40px;
-}
 
-.teknologi-parag1 > p{
-  font-size: 20px;
-  line-height: 1.3cm;
-}
+
+
 
 .påvirkning {
   border-style: solid;
   border-color: #000000;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
-  padding: 70px 50px 70px 50px;
+  
   margin-left: auto;
   margin-right: auto
 }
 
-.påvirkning-tittel {
-  font-size: 40px;
-}
 
-.påvirkning-parag3 > p {
-  font-size: 20px;
-  line-height: 1.3cm;
-}
 
-.påvirkning-parag3 > ol {
-  font-size: 20px;
-  line-height: 1.3cm;
-  font-family: sans-serif;
-}
 
 .footer{
   border-style: solid;
   border-color: #000000;
   border-width: 1.5px 0px 0 0px;
   width: 60vw;
-  padding: 10px 50px 10px 50px;
+  
   text-align: center;
   margin-left: auto;
   margin-right: auto
 }
+.kilder {
+  width: 60vw;
+  
+  box-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-sikkerhverdag {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:2px solid #9c9584;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  font-size: 20px;
+  background-color: #EFEAE4;
+  text-align:center;
+}
+.btn-sikkerhverdag:hover {
+  cursor:pointer;
+  background-color: #9C9584;
+}
+
+.btn-falskenyheter {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:2px solid #9c9584;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  font-size: 20px;
+  background-color: #EFEAE4;
+  text-align:center;
+}
+
+.btn-falskenyheter:hover {
+  cursor: pointer;
+  background-color: #9c9584;
+}
+
+.btn-tweet {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:2px solid #9c9584;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  font-size: 20px;
+  background-color: #EFEAE4;
+  text-align:center;
+}
+
+.btn-tweet:hover {
+  cursor: pointer;
+  background-color: #9c9584;
+}
+
+@media only screen and (max-width:800px){
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 16px;
+    line-height: .7cm;
+  }
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li {
+    font-size: 18px;
+    line-height: .8cm;
+  }
 
 
+  .hero{
+    width:100%;
+  }
 
-@media(max-width:650px){
-  .side-nav a{
-    
-    font-size: 35px;
+  .side-nav a:not(a:nth-child(1)){
+    font-size: 40px;
+    padding:50px 0 50px 25px;
     
   }
 
+  .title{
+    font-size: 40px;
+  }
+
+  main > article:nth-child(-n+4){
+    padding: 0px 0px 75px 0px;
+  }
+
+  .teknologi{
+    width: 90vw;
+  }
+  
+  
+  .falske-nyheter{
+    width:90vw;
+    
+  }
+
+  .påvirkning{
+    width:90vw;
+  }
+  
+  .btn-sikkerhverdag{
+    display:block;
+    margin:0.4em auto;
+  }
+  .btn-falskenyheter{
+    display:block;
+    margin:2rem auto;
+  }
+  .btn-tweet{
+    display:block;
+    margin:0.4em auto;
+  }
+
+  .kilder{
+    width:90vw;
+  }
+
+  .footer{
+    width:90vw;
+  }
+  
 }
 
-.kilder a{
-  text-decoration: none;
-  color: black
-
+@media only screen and (min-width:800px) and (max-width:1500px) {
+  
+  html [class] > p, 
+  html * > * > p,
+  html [class] > * > p,
+  html [id] > * > p,
+  html [class] > * > * > p,
+  html [id] > * > * > p {
+    font-size: 18px;
+    line-height: .8cm;
+  }
+  html [class] > li, 
+  html * > * > li,
+  html [class] >ol * > li,
+  html [id] > * > li,
+  html [class] > * > * > li,
+  html [id] > * > * > li {
+    font-size: 18px;
+    line-height: .8cm;
 }
+
+  .title{
+    font-size: 65px;
+  }
+  .teknologi{
+    width: 80vw;
+  }
+  
+  
+  .falske-nyheter{
+    width:80vw;
+    
+  }
+
+  .påvirkning{
+    width:80vw;
+  }
+  
+  .kilder{
+    width:80vw;
+  }
+
+  
+
+  .footer{
+    width:80vw;
+  }
+}
+
+

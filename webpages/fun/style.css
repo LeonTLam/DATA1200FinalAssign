@@ -43,6 +43,7 @@ main{
 
 
 
+
 .side-nav{
   height: 100%;
   width: 0;
@@ -63,13 +64,13 @@ main{
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#9c9584; 
+  color:#4E4841; 
   display:block;
   transition: 0.3s;
 }
 
 .side-nav a:hover{
-  color: #534f46;
+  color: #4E4841;
 }
 
 .side-nav .btn-close{
@@ -119,9 +120,8 @@ main{
 
 @media(max-width:650px){
   .side-nav a{
-    
     font-size: 35px;
-    
+    margin: 5rem 0 5rem 0;
   }
 
 

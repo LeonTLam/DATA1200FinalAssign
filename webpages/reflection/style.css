@@ -64,13 +64,13 @@ main{
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
-  color:#9c9584; 
+  color:#4E4841; 
   display:block;
   transition: 0.3s;
 }
 
 .side-nav a:hover{
-  color: #534f46;
+  color: #4E4841;
 }
 
 .side-nav .btn-close{
@@ -88,7 +88,7 @@ main{
   
   background-size:cover;
   display:flex;
-  background-image: linear-gradient(#534f46, #9C9584 , #EFEAE4 );
+  background-image: linear-gradient(#534f46, #9c9584, #EFEAE4 );
   
   align-items: center;
   justify-content: center;
@@ -119,12 +119,10 @@ main{
 }
 
 /*Main*/
-main > article:nth-child(-n+3):not(:first-child){
-  padding: 75px 50px 75px 50px;
+main > article:nth-child(-n+3){
+  padding: 0 50px 75px 50px;
 }
-main > article:nth-child(1){
-  padding: 75px 50px 0 50px;
-}
+
  
 
 #main {
@@ -276,7 +274,7 @@ main > article:nth-child(1){
 
 
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:800px){
   html [class] > p, 
   html * > * > p,
   html [class] > * > p,
@@ -287,15 +285,19 @@ main > article:nth-child(1){
     line-height: .7cm;
 }
   
-  .side-nav a{
-    font-size: 35px;
+  .side-nav a:not(a:nth-child(1)){
+    font-size: 40px;
+    padding:50px 0 50px 25px;
+    
   }
   
   .title{
     font-size: 45px;
   }
 
- 
+  main > article:nth-child(-n+3){
+    padding: 0px 0px 75px 0px;
+  }
 
   .student{
     flex-direction: column;
@@ -308,8 +310,16 @@ main > article:nth-child(1){
 
   .arbeidsmengde{
     width: 90vw;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 1.2fr 1.5fr; 
+    
+    grid-template-areas: 
+      "arbeid-tittel arbeid-tittel"
+      "arbeid-img-container arbeid-img-container"
+      "arbeid-parag1 arbeid-parag1"; 
   }
-
+  
+  
   .student-text{
     padding-left: 0;
   }
@@ -320,10 +330,9 @@ main > article:nth-child(1){
   
 }
 
-@media only screen and (min-width:750px) and (max-width:1280px) {
- 
 
-  
+@media only screen and (min-width:800px) and (max-width:1500px) {
+ 
 
   html [class] > p, 
   html * > * > p,
@@ -334,6 +343,8 @@ main > article:nth-child(1){
     font-size: 18px;
     line-height: .8cm;
 }
+
+
 
 .title{
   font-size: 65px;

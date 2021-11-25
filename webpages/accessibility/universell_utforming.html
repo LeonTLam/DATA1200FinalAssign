@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="no">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -19,7 +19,7 @@
         <nav class="navigasjonsbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
-                <img src="../../svg/menubar.svg" width="30" height="30" color>
+                <img src="../../svg/menubar.svg" width="30" height="30" color alt="navigasjonsbar">
             </a>
         </span>
 
@@ -57,17 +57,33 @@
         </script>
     </header>
     
-    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30"></button>
+    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Knapp tilbake til toppen"></button>
 
     <main>
         <article>
-            <div class ="automated-test">
-                <h2>automated test</h2>
+            <div class ="automated-test" tabindex="0">
+                <h2>WAVE</h2>
+                <p>
+                
+                    Vi brukte chrome extension "WAVE Evaluation Tool" for å teste nettsidens tilgjengelighet. Bildet viser resultatene fra første gangen vi bruke WAVE. De 3 feilene var at vi manglet alternative text til 2 av bildene vi har brukt, og vi glemte å deklarere språket. I tillegg så hadde vi hoppet over et heading nivå. 
 
+                    <img src="../../images/accessibility_images/1. utgave.PNG" alt="Resultater fra WAVE">
+                </p>
+
+                <p>
+
+                    <img src="../../images/accessibility_images/Kontrast.PNG" alt="Kontrast for lavt">
+                </p>
+
+                <p>
+                    Slutt resultatet?
+
+                    <img src="../../images/accessibility_images/2. utgave.PNG" alt="">
+                </p>
             </div>
         </article>
         <article>
-            <div class="universal-design">
+            <div class="universal-design" tabindex="0">
                 <h3>Universell design</h3>
                 <p>
                     Web Content Accessibility Guidelines (WCAG) samarbeider med individer og organisasjoner med et mål om a skape en standard som møter folkets behov. 
@@ -91,42 +107,47 @@
                             <li>Keyboard Accessible: Make all functionality available from a keyboard.</li>
                             <li>Enough Time: Provide users enough time to read and use content.</li>
                             <li>Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.</li>
-                            <li>2.4 – Navigable: Provide ways to help users navigate, find content, and determine where they are.</li>
-                            <li>3.1 – Readable: Make text content readable and understandable.</li>
-                            <li>3.2 – Predictable: Make Web pages appear and operate in predictable ways.</li>
+                            <li> – Navigable: Provide ways to help users navigate, find content, and determine where they are.</li>
+                            <li> <strong>3.1 – Readable:</strong> Make text content readable and understandable.</li>
+                            <li> <strong>3.2 – Predictable:</strong> Make Web pages appear and operate in predictable ways.</li>
                             <li>3.3 – Input Assistance: Help users avoid and correct mistakes.</li>
                             <li>4.1 – Compatible Maximize compatibility with current and future user agents, including assistive technologies.</li>
                         </ol>
                     </div>
-                
             </div>
         </article>
         <article>
             <div>
                 <h5>Tekst og lesbarhet</h5>
                 <div>
-                    <h6>For dataskjermer med bredde 1920 og oppover</h5>
-                    <ul>
-                        <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
-                        <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
-                        <li>En svært standard font som gjør det lettere å forstå.</li>
-                    </ul>
+                    <p>
+                        Vide skjermer
+                        <ul>
+                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
+                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
+                            <li>En svært standard font som gjør det lettere å forstå.</li>
+                        </ul>
+                    </p>
                 </div>
                 <div>
-                    <h6>For mellomstore skjermer (slik som tablets)</h5>
-                    <ul>
-                        <li>Bredde på 80% av enhetens bredde og sentrert</li>
-                        <li>Font litt mindre og litt tettere for at brukeren slipper å bla langt ned for å lese kun en tekst.</li>
-                        <li>Samme font</li>
-                    </ul>
+                    <p>
+                        Tablets
+                        <ul>
+                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
+                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
+                            <li>En svært standard font som gjør det lettere å forstå.</li>
+                        </ul>
+                    </p>
                 </div>
                 <div>
-                    <h6>Mobilskjermer</h6>
-                    <ul>
-                        <li>Bredde på 90% siden folk fleste surfer nettet med mobilen stående. Enheten er også lengre vertikalt enn horisontalt.</li>
-                        <li>Font er bittelitt mindre og bittelitt tettere for at den skal passe fint og fortsatt være lesbar.</li>
-                        <li>Samme font</li>
-                    </ul>
+                    <p>
+                        Mobilskjermer
+                        <ul>
+                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
+                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
+                            <li>En svært standard font som gjør det lettere å forstå.</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
         </article>
