@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
 html{
   scroll-behavior: smooth;
 }
-
+  html [class] > blockquote, 
+  html * > * > blockquote,
+  html [class] > * > blockquote,
+  html [id] > * > blockquote,
+  html [class] > * > * > blockquote,
+  html [id] > * > * > blockquote {
+    /*Sørger for at alle blockquotes, uansett "path" får gitt styling*/
+    line-height: 1.3cm;
+    font-size: 20px;
+}
 html [class] > p, 
   html * > * > p,
   html [class] > * > p,
@@ -27,7 +36,7 @@ html [class] > p,
   }
 
 body{
-  background-color: #EFEAE4;
+  background-color: #f3f1ed;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -48,14 +57,16 @@ main{
   top: 10px; 
   right: 10px; 
   height: 63px;
+  cursor:pointer;
 }
 
 .navigasjonsbar a{
   /*Legger til en hitbox for meny-knappen*/
   float:right;
   display:block;
-  color: #9C9584;
+  color: #f3f1ed;
   text-align: center;
+  overflow:hidden;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -70,7 +81,7 @@ main{
   left: 0;
   z-index: 90;
   opacity: 1;
-  background-color: #9C9584; 
+  background-color: rgb(150, 144, 135); 
   overflow-x:hidden;
   padding-top: 60px;
   transition: 0.5s;
@@ -81,7 +92,8 @@ main{
   display:block;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  color:#f3f1ed; 
+  color: #f3f1ed;
+  /*color:#f3f1ed;*/ 
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
@@ -116,12 +128,11 @@ main{
 }
 
 .hero {
-  width:100%;
+  width:100vw;
   height:100vh;
-  /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/bilder/svg/test.jpeg") center no-repeat;*/
-  background-color: whitesmoke;
+  background-image: linear-gradient(rgba(83,79,70,.7), rgba(156, 149, 132, 0.658), #f3f1ed );
+  
   background-size:cover;
-  background-attachment: fixed;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +145,7 @@ main{
   animation: typing 2s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 1.5px solid;
   font-family: monospace;
   font-size: 85px;
   font-weight: bold;
@@ -157,9 +168,12 @@ ol{
   }
 }
 
+
+
 /*Main > Articles*/
 
-main > article:nth-child(-n+2){
+
+main > article:nth-child(-n+6){
   padding: 0px 50px 75px 50px;
 }
 
@@ -248,6 +262,17 @@ main > article:nth-child(-n+2){
   text-align: center;
 }
 
+.skjermleser{
+  width: 60vw;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1.5px 0px 0 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.skjermleser-tittel{
+  font-size:40px ;
+}
 .universell-design{
   width: 60vw;
   border-style: solid;
@@ -325,10 +350,21 @@ main > article:nth-child(-n+2){
   padding: 10px 50px 10px 50px;
   text-align: center;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 @media only screen and (max-width:800px){
+  html [class] > blockquote, 
+  html * > * > blockquote,
+  html [class] > * > blockquote,
+  html [id] > * > blockquote,
+  html [class] > * > * > blockquote,
+  html [id] > * > * > blockquote {
+    
+    font-size: 16px;
+    line-height: .7cm;
+}
+
   html [class] > p, 
   html * > * > p,
   html [class] > * > p,
@@ -349,7 +385,7 @@ main > article:nth-child(-n+2){
   }
 
   .navigasjonsbar{
-    position: fixed;
+    position: absolute;
   }
   
   .hero{
@@ -366,49 +402,29 @@ main > article:nth-child(-n+2){
     font-size:40px;
   }
 
+  main > article:nth-child(-n+6) > div{
+    /*Endrer bredde på alle div-containere i de 6 forskjellige articles*/
+    width: 90vw;
+  }
+
+  main > article:nth-child(-n+6) > div:nth-child(-n+5) > div:nth-child(1){
+    /*Endrer tittelen i de 5 første div-containerne, gjennom de 6 forskjellige articles*/
+    text-align: center;
+  }
+
   main > article:nth-child(-n+5){
     padding: 0px 0px 75px 0px;
   }
-
-  .wave{
-    width: 90vw;
-  }
-  .wave-tittel{
-    text-align: center;
-  }
   
   .kontrast{
-    width: 90vw;
     gap: 0px 25px; 
   }
-  .kontrast-tittel{
-    text-align: center;
-  }
-
-  .universell-design{
-    width: 90vw;
-  }
-  .universell-tittel{
-    text-align: center;
-  }
-
-
-  .lesbarhet{
-    width: 90vw;
-  }
-  .lesbarhet-tittel{
-    text-align: center;
-  }
   
-  .kilder{
-    width:90vw;
-  }
   .btn-kilder{
     display:block;
     margin:25px auto;
   }
 
-  
   .footer{
     width:90vw;
   }
@@ -417,6 +433,17 @@ main > article:nth-child(-n+2){
 
 @media only screen and (min-width:800px) and (max-width:1500px) {
   
+  html [class] > blockquote, 
+  html * > * > blockquote,
+  html [class] > * > blockquote,
+  html [id] > * > blockquote,
+  html [class] > * > * > blockquote,
+  html [id] > * > * > blockquote {
+    /*Sørger for at alle blockquotes, uansett "path" får gitt styling*/
+    font-size: 18px;
+    line-height: .8cm;
+}
+
   html [class] > p, 
   html * > * > p,
   html [class] > * > p,
@@ -435,43 +462,22 @@ main > article:nth-child(-n+2){
     font-size: 18px;
     line-height: .8cm;
   }
-  .wave{
+
+.title{
+  font-size: 60px;
+}
+
+  main > article:nth-child(-n+6) > div{
     width: 80vw;
   }
-  .wave-tittel{
+
+  main > article:nth-child(-n+6) > div:nth-child(-n+5) > div:nth-child(1){
     text-align: center;
   }
-
-  .kontrast{
-    width: 80vw;
-  }
-  .kontrast-tittel{
-    text-align: center;
-  }
-
-  .universell-design{
-    width: 80vw;
-  }
-  .universell-tittel{
-    text-align: center;
-  }
-
-  .lesbarhet{
-    width: 80vw;
-  }
-  .lesbarhet-tittel{
-    text-align: center;
-  }
-
-  .kilder{
-    width:80vw;
-  }
-
+  
 
   .footer{
     width:80vw;
   }
-  .footer{
-    width:80vw;
-  }
+  
 }

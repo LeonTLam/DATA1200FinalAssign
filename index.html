@@ -40,7 +40,7 @@
         </div>
         
         <!--Forsidebilde med tittel-->
-        <div class="hero">
+        <div class="hero" tabindex="0">
             <h1 class="title">
                 Final Assignment - Gruppe 1200
             </h1>
@@ -48,17 +48,15 @@
 
         
     </header>
-    
-    <!--"Gå til topps"-knapp med funksjon "goTop()"-->
-    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="svg/goup.svg" width="30" height="30" alt="Knapp til topp"></button>
 
     <!--Main-->
     <main>
         
         
         <article>
-            <div class="velkommen"  >
-                <h3>Velkommen!</h3>
+            <div class="velkommen" tabindex="0">
+                <!--Tittelen kommer alltid først etter container. Brukes som nth-child(1) under styling.-->
+                <div class="velkommen-tittel"><h2>Velkommen!</h2></div>
                 <p> Teknologi er fremtiden, det vet vi alle. En rekke universiteter i hele verden tilbyr spennende utdanninger innenfor teknologi. OsloMet er en av dem. 
                     Teknologistudiene på OsloMet vil lære deg interessante ting som vil gi deg muligheten til å jobbe innenfor mange spennende yrker. 
                     Som første-års student vil du få et godt grunnlag for fremtiden. Du vil blant annet ha emner som programmering, diskret matematikk, web utvikling, og teknologi og samfunn. 
@@ -73,9 +71,9 @@
         
 
         <article>
-            <div class="oslomet-container" >
-                <div class="oslomet-img"><img src="images/main_images/p35.jpg" alt="Pilestredet-35" ></div>
+            <div class="oslomet-container" tabindex="0">
                 <div class="oslomet-tittel"><h3>Oslo Metropolitan University</h3></div>
+                <div class="oslomet-img"><img src="images/main_images/p35.jpg" alt="Pilestredet-35" ></div>
                 <div class="oslomet-text" >
                     <p>Oslo Metropolitan University, også kalt Storbyuniversitet, er den tidligere Høgskolen i Oslo og Akershus. OsloMet har studiesteder i både Oslo og Lillestrøm. </p>
                     <p> Pilestredet 35<br>
@@ -85,6 +83,9 @@
             </div>
         </article>
     </main>
+    
+    <!--"Gå til topps"-knapp med funksjon "goTop()"-->
+    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="svg/goup.svg" width="30" height="30" alt="Knapp til topp"></button>
     
     <!--Footer-->
     <footer>
@@ -102,7 +103,7 @@
         }
         function closeSlideMenu(){
             //Tar til seg "side-menu" og lukker den ved å bredde 0%.
-            document.getElementById('side-menu').style.width="0%";
+            document.getElementById('side-menu').style.width="0px";
             
         }
 

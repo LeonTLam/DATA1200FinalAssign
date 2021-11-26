@@ -49,6 +49,7 @@ main{
   top: 10px; 
   right: 10px; 
   height: 63px;
+  cursor:pointer;
 }
 
 .navigasjonsbar a{
@@ -57,9 +58,11 @@ main{
   display:block;
   color: #f3f1ed;
   text-align: center;
+  overflow:hidden;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  cursor:pointer;
 }
 
 .side-nav{
@@ -82,7 +85,7 @@ main{
   display:block;
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  color:#f3f1ed; 
+  color: #f3f1ed; 
   font-size: 80px;
   line-height: 1.3;
   font-weight: bold;
@@ -176,7 +179,9 @@ ol li{
   margin: 40px;
 }
 
-
+main h2{
+  font-size: 40px;
+}
 
 main h3{
   font-size: 40px;
@@ -294,27 +299,16 @@ main h3{
     padding: 0px 0px 75px 0px;
   }
 
-  .teknologi{
+  main > article:nth-child(-n+4) > div{
     width: 90vw;
   }
-  
-  
-  .falske-nyheter{
-    width:90vw;
-    
+  main > article:nth-child(-n+4) > div:nth-child(-n+3) > div:nth-child(1){
+    text-align: center;
   }
 
-  .påvirkning{
-    width:90vw;
-  }
-  
   .btn-kilder{
     display:block;
     margin:25px auto;
-  }
-
-  .kilder{
-    width:90vw;
   }
 
   .footer{
@@ -347,22 +341,12 @@ main h3{
   .title{
     font-size: 65px;
   }
-  .teknologi{
+  
+  main > article:nth-child(-n+4) > div{
     width: 80vw;
   }
-  
-  
-  .falske-nyheter{
-    width:80vw;
-    
-  }
-
-  .påvirkning{
-    width:80vw;
-  }
-  
-  .kilder{
-    width:80vw;
+  main > article:nth-child(-n+4) > div:nth-child(-n+3) > div:nth-child(1){
+    text-align: center;
   }
 
   .footer{

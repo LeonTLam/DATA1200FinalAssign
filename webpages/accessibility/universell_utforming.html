@@ -35,7 +35,7 @@
             <a href="../fun/moro.html">Moro</a>
         </div>
         
-        <div class="hero">
+        <div class="hero" tabindex="0">
             <h1 class="title">
                 Universell Utforming
             </h1>
@@ -43,35 +43,11 @@
 
         
     </header>
-    
-    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Knapp tilbake til toppen"></button>
 
     <main>
         <article>
-            <div class ="wave">
-                <div class="wave-img"><img src="../../images/accessibility_images/1. utgave.PNG" alt="Resultater fra WAVE"></div>
-                <div class="wave-tittel"><h2>WAVE</h2></div>
-                <div class ="wave-tekst">
-                    <p>
-                        Vi brukte chrome extension "WAVE Evaluation Tool" for å teste nettsidens tilgjengelighet. Bildet viser resultatene fra første gangen vi bruke WAVE. De 3 feilene var at vi manglet alternative text til 2 av bildene vi har brukt, og vi glemte å deklarere språket. I dette tilfellet så hadde vi hoppet over et heading nivå. 
-                    </p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class ="kontrast">
-                <div class="kontrast-img"><img src="../../images/accessibility_images/Kontrast.PNG" alt="Kontrast for lavt"></div>
-                <div class="kontrast-tittel"><h2>Kontrast</h2></div>
-                <div class="kontrast-tekst">
-                    <p>
-                        Den første utgaven av navigasjonsmenyen vår hadde en bakgrunnsfarge #EFEAE4 hvor teksten sto skrevet med #9C9584. Ifølge WCAG sine retningslinjer var det for lav kontrast mellom tekst og bakgrunnsfargen vi opprinnelig valgte. Heldigvis har WAVE en funksjon som lar deg justere lysstyrken til både tekst og bakgrunnsfarge helt til den oppfyller de nødvendige kontrastforholdene. 
-                    </p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <div class="universell-design">
-                <div class="universell-tittel"><h3>Universell design</h3></div>
+            <div class="universell-design" tabindex="0">
+                <div class="universell-tittel"><h1>Universell utforming</h1></div>
                 <p>
                     Web Content Accessibility Guidelines (WCAG) samarbeider med individer og organisasjoner med et mål om a skape en standard som møter folkets behov. 
                     Dokumenter av <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> informerer og forklarer hvordan én kan gjøre innholdet sitt mer tilgjengelig for folk med hemninger. 
@@ -85,10 +61,10 @@
                     Vi satte vekt på struktur av både kode og innhold, samt presentasjon slik at brukeren ikke skal ha et problem med å forstå og lese hva som står på nettsiden. 
                     I all hovedsak, følger gruppen <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> sine retningslinjer, med unntak av noen få retningslinjer som ikke var relevante for nettsiden vår. For eksempel retningslinje 3.3 <cite><a href="https://www.w3.org/WAI/WCAG21/Understanding/input-assistance" target="_blank">Input Assistance</a></cite> ettersom det ikke tas i bruk bruker-input, annet enn tastetrykk. Følgende punkter er retningslinjer vi forholder oss til:</p>
                     <div class="WCAG">
-                        <h4><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></h4>
+                        <h1><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></h1>
                         <ol>
                             <li><strong>1.1 - Text Alternatives:</strong> Provide text alternatives for any non-text content.</li>
-                            <li><strong>1.3 Adaptable:</strong> Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</li>
+                            <li><strong>1.3 - Adaptable:</strong> Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</li>
                             <li><strong>1.4 - Distinguishable:</strong> Make it easier for users to see and hear content including separating foreground from background.</li>
                             <li><strong>2.1 - Keyboard Accessible:</strong> Make all functionality available from a keyboard.</li>
                             <li><strong>2.2 - Enough Time:</strong> Provide users enough time to read and use content.</li>
@@ -102,49 +78,92 @@
             </div>
         </article>
         <article>
-            <div class="lesbarhet">
-                <div class="lesbarhet-tittel"><h5>Tekst og lesbarhet</h5></div>
-                <div>
+            <div class ="wave" tabindex="0">
+                <div class="wave-tittel"><h2>WAVE</h2></div>
+                <div class="wave-img"><img src="../../images/accessibility_images/1. utgave.PNG" alt="Resultater fra WAVE"></div>
+                <div class ="wave-tekst">
                     <p>
-                        Vide skjermer
-                        <ul>
-                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
-                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
-                            <li>En svært standard font som gjør det lettere å forstå.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Tablets
-                        <ul>
-                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
-                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
-                            <li>En svært standard font som gjør det lettere å forstå.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Mobilskjermer
-                        <ul>
-                            <li>Bredde på innholdet ved 60% av enhetens bredde og sentrert. Hensikten er fordi dataskjermer har en aspect ratio på 16:9 som gjør dem veldig brede.</li>
-                            <li>Font størrelse og linjeavstand for at lange paragrafer blir lettere å lese.</li>
-                            <li>En svært standard font som gjør det lettere å forstå.</li>
-                        </ul>
+                        I denne oppgaven har vi bestemt oss for å bruke <cite>WAVE - Evaluation Tool</cite> for å teste nettsidens tilgjengelighet. 
+                        I bildet ser du resultat fra første feilsøking av <abbr title ="Web Accessibility Evaluation Tool"> WAVE</abbr>. 
+                        Til sammen hadde vi 3 generelle feil, hvorav det manglet alternativ tekst til bilder, deklarering av språk og et heading nivå.<br>
+                        I tillegg, hadde vi 6 kontrastfeil som gjentok seg mellom alle fire sider, utenom moro-siden. Kontrastfeilen var forårsaket av navigasjonsmenyen samt kontrasten mellom innholdet og bakgrunnen.
+                        
+
+                       
                     </p>
                 </div>
             </div>
         </article>
         <article>
-            <div class="kilder">
+            <div class ="kontrast" tabindex="0">
+                <div class="kontrast-tittel"><h3>Kontrast</h3></div>
+                <div class="kontrast-img"><img src="../../images/accessibility_images/Kontrast.PNG" alt="Kontrast for lavt"></div>
+                <div class="kontrast-tekst">
+                    <p>
+                        Ifølge <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> sine retningslinjer var det for lav kontrast mellom tekst og bakgrunnsfarge på navigasjonsmenyen. Heldigvis var det lett å fikse siden <abbr title ="Web Accessibility Evaluation Tool"> WAVE</abbr> har en funksjon som lar én justere lysstyrken til både tekst og bakgrunnsfarge helt til begge oppfyller de nødvendige kontrastforholdene. 
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="skjermleser">
+                <div class="skjermleser-tittel"><h4>Skjermleser</h4></div>
+                <div class="skjermleser-tekst">
+                    <p>
+                        Før vi var klare for å teste nettsiden med en skjermleser, hadde vi lyst til å være sikker på at det var fullt mulig å navigere seg gjennom sidene kun ved bruk av tastatur. 
+                        Vi bestemte oss for å bruke "tabindex" fordi vi syntes det var både den letteste og den mest oversiktlige måten å sikre at nettsiden var tastatur og skjermleser vennlig. 
+                        Til slutt brukte vi "Chrome Screen reader" for å teste hvordan nettsiden ville oppleves av en synshemmede bruker. 
+                        Det var fullt mulig for oss å bruke skjermleseren slik at vi fikk med oss alt innhold på siden. 
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article>
+            <div class="lesbarhet" tabindex="0">
+                <div class="lesbarhet-tittel"><h5>Tiltak for Tekst og lesbarhet</h5></div>
+                <div>
+                    <p>
+                        Vide skjermer<br>
+                            <blockquote>På skjermer med aspect ratio 16:9 og høyere oppløsning, har vi valgt større font størrelse og linjeavstand slik at lange paragrafer skal være lettere å lese.<br>
+                            Vi bestemte oss for en standard font, én font lett å forstå og som ikke én trenger å anstrenge seg for å lese.<br>
+                            Siden fleste dataskjermer har en 16:9 aspect ratio, valgte vi å beholde all innhodlet i en bredde på 60% av enhetensbredde. På denne måten, slipper brukeren å måtte vri om blikket sitt.
+                        </blockquote>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Tablets<br>
+                            <blockquote>På tablets som ofte blir brukt i portrett, valgte vi en bredde på 80% med mindre font og litt lavere linjeavstand.<br>
+                            Med 80% enhetsbredde, slipper nettsiden å ha padding og margin på sidene, spesielt når enheten allerede er smal på bredden.</blockquote>
+                        
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Mobilskjermer<br>
+                        <blockquote>På smarttelefoner som også blir ofte brukt i portrett, valgte vi en bredde på 90% med enda mindre font og enda lavere linjeavstand.<br>
+                        Med 90% enhetsbredde sørger vi for at tekst og bilde har god nok plass, uten at brukerens hender eller fingere kan stå i veien. <br>
+                        I dette tilfellet, endret vi også på grid-layout, slik at bilder og tekst ikke klemte hverandre små og heller fikk tilskrekkelig med plass.</blockquoted>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="kilder" tabindex="0">
                 <p>Kilder: 
+                    <!--Eksterne lenker som åpner ny tab-->
                     <button class="btn-kilder" onclick=" window.open('https://www.w3.org/WAI/WCAG21/quickref/', '_blank' )" > WCAG 2 checklist </button>
                     <button class="btn-kilder" onclick=" window.open('https://www.w3.org/WAI/WCAG21/Understanding/input-assistance', '_blank' )" > Input Assistance </button>
+                    <button class="btn-kilder" onclick=" window.open('https://wave.webaim.org/', '_blank' )" > WAVE </button>
+                    <button class="btn-kilder" onclick=" window.open('https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en', '_blank' )" > Chrome Screen Reader </button>
                 </p>
             </div>
         </article>
     </main>
+
+    <!--"Gå til topps"-knapp med funksjon "goTop()"-->
+    <button onclick="goTop()" id="go_top" title="Go to the top"><img src="../../svg/goup.svg" width="30" height="30" alt="Knapp tilbake til toppen"></button>
 
     <!--Footer-->
     <footer>
